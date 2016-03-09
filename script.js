@@ -50,7 +50,7 @@ window.addEventListener('load', function () {
 
         // Otherwise, we can fallback to a regular modal alert
         else {
-          alert("Hi!");
+          alert("Hi Cope, I fucking hate kyle!");
         }
       });
     }
