@@ -2,5 +2,33 @@ h1{
 	color: #800000;
 	font-size: 50;
 	text-align: center;
-	background-image: Edward Little.PNG;
+	background-image: Edward Little.PNG.png;
+}
+body{
+	text-align: center;
+
+
+}
+button{
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	border-color: #800000;
+	background-color: white;
+	display: block;
+	border-radius: 7px;
+	width: 20%; 
+	height: 10%;
+	margin: auto;
+	margin-bottom: 10px;
+
+}
+button:hover{
+	background-color: #800000;
+	color: white;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+button:active {
+  background-color: #800000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
