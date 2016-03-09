@@ -61,4 +61,16 @@ window.addEventListener('load', function () {
       alert("Hi!");
     }
   });
+  var calendarBtn = document.getElementsByTagName("button")[1];
+  calendarBtn.addEventListener("click", function () {
+    location.href="calendar.html";
+  });
+  var signupBtn = document.getElementById("signupBtn");
+  signupBtn.addEventListener("click", function () {
+    location.href="signup.html";
+  })
+
 });
+
+
+
