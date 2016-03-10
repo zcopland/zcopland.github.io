@@ -7,8 +7,6 @@ h1{
 }
 body{
 	text-align: center;
-
-
 }
 button{
 	-webkit-transition-duration: 0.4s;
@@ -34,4 +32,12 @@ button:active {
   background-color: #800000;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+#formTitle {
+	text-align: left;
+	color: #800000;
+}
+form {
+	text-align: left;
+	color: #800000;
 }
