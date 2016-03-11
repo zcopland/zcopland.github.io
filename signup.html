@@ -9,22 +9,28 @@
 	<h1>Sign Up</h1>
 	<h3 id="formTitle">Please fill out the fields below:</h3>
 	<form>
-		First Name:<br>
-		<input type="text" name="firstName"></input><br><br>
-		Last Name:<br>
-		<input text="text" name="lastName"></input><br><br>
-		Phone Number:<br>
-		<input type="number" name="phoneNumber"></input><br><br>
-		Sport:<br>
-		<input type="radio" name="sport" value="Track" checked>Track & Field</input><br>
-		<input type="radio" name="sport" value="Baseball">Baseball</input><br>
-		<input type="radio" name="sport" value="Lax">Lax</input><br><br>
-		Position(optional):<br>
-		<input type="text" name="position"></input><br><br>
-		Gender:<br>
-		<input type="radio" name="gender" value="male" checked>Male</input><br>
-		<input type="radio" name="gender" value="female">Female</input><br><br>
-		<input type="submit" value="Submit" id="submitBtn"></input>
+		<fieldset>
+			<legend>Personal Information</legend>
+			First Name:<br>
+			<input type="text" name="firstName"></input><br><br>
+			Last Name:<br>
+			<input text="text" name="lastName"></input><br><br>
+			Phone Number:<br>
+			<input type="tel" name="phoneNumber"></input><br><br>
+			Gender:<br>
+			<input type="radio" name="gender" value="male" checked>Male</input><br>
+			<input type="radio" name="gender" value="female">Female</input><br><br>
+		</fieldset>
+		<fieldset>
+			<legend>Sport Information</legend>
+			Sport:<br>
+			<input type="radio" name="sport" value="Track" checked>Track & Field</input><br>
+			<input type="radio" name="sport" value="Baseball">Baseball</input><br>
+			<input type="radio" name="sport" value="Lax">Lax</input><br><br>
+			Position(optional):<br>
+			<input type="text" name="position"></input><br><br>
+		</fieldset>
+		<input type="submit" value="Submit" id="submitBtn" onClick="alert('Form Submitted!')"></input>
 	</form>
 </body>
 </html>
