@@ -5,18 +5,9 @@ h1{
 	background-color: #800000;
 	border-radius: 8px;
 }
-#calendarPage {
-	background: -webkit-linear-gradient(gray, white);
-}
-#indexPage {
-	text-align: center;
-	background: -webkit-linear-gradient(gray, white);
-}
-#signupPage {
-	
-}
 body{
 	height: 100%;
+	background: -webkit-linear-gradient(gray, white);
 }
 button{
 	-webkit-transition-duration: 0.4s;
