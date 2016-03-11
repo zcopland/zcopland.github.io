@@ -7,25 +7,26 @@ h1{
 }
 body{
 	text-align: center;
+	background: -webkit-linear-gradient(gray, white);
 }
 button{
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 	border-color: #800000;
-	background: -webkit-linear-gradient(#800000, white);
+	background-color: white;
 	display: block;
 	border-radius: 7px;
 	width: 50%; 
 	height: 20%;
 	margin: auto;
 	margin-bottom: 20px;
-	color: white;
+	color: #800000;
 	font-size: 25;
 	font-weight: 700;
 }
 button:hover{
-	background-color: white;
-	color: #800000;
+	background-color: #800000;
+	color: white;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 button:active {
