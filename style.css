@@ -6,7 +6,7 @@ h1{
 	border-radius: 8px;
 }
 #calendarPage {
-	
+	background: -webkit-linear-gradient(gray, white);
 }
 #indexPage {
 	text-align: center;
@@ -16,7 +16,7 @@ h1{
 	
 }
 body{
-	
+	height: 100%;
 }
 button{
 	-webkit-transition-duration: 0.4s;
