@@ -1,36 +1,35 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Sign Up</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src= "signupScript.js"></script>
 </head>
-<body id ="signupPage">
+<body>
 	<h1>Sign Up</h1>
 	<h3 id="formTitle">Please fill out the fields below:</h3>
-	<form>
+	<form id="sportsForm">
 		<fieldset>
 			<legend>Personal Information</legend>
 			First Name:<br>
-			<input type="text" name="firstName"></input><br><br>
+			<input type="text" name="firstName" id="firstName" /><br><br>
 			Last Name:<br>
-			<input text="text" name="lastName"></input><br><br>
+			<input text="text" name="lastName" id="lastName" /><br><br>
 			Phone Number:<br>
-			<input type="tel" name="phoneNumber"></input><br><br>
+			<input type="tel" name="phoneNumber" id="phoneNumber" /><br><br>
 			Gender:<br>
-			<input type="radio" name="gender" value="male" checked>Male</input><br>
-			<input type="radio" name="gender" value="female">Female</input><br><br>
+			<input type="radio" name="gender" id="gender" value="male" checked>Male</input><br>
+			<input type="radio" name="gender" id="gender" value="female">Female</input><br><br>
 		</fieldset>
 		<fieldset>
 			<legend>Sport Information</legend>
 			Sport:<br>
-			<input type="radio" name="sport" value="Track" checked>Track & Field</input><br>
-			<input type="radio" name="sport" value="Baseball">Baseball</input><br>
-			<input type="radio" name="sport" value="Lax">Lax</input><br><br>
+			<input type="radio" name="sport" id="sport" value="Track" checked>Track & Field</input><br>
+			<input type="radio" name="sport" id="sport" value="Baseball">Baseball</input><br>
+			<input type="radio" name="sport" id="sport" value="Lax">Lax</input><br><br>
 			Position(optional):<br>
-			<input type="text" name="position"></input><br><br>
+			<input type="text" name="position" id="position"></input><br><br>
 		</fieldset>
-		<input type="submit" value="Submit" id="submitBtn" onClick="alert('Form Submitted!')"></input>
+		<input type="button" name="submit" value="Submit" id="submitBtn" onclick="signUp()" />
 	</form>
 </body>
 </html>
