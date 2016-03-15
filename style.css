@@ -4,6 +4,7 @@ h1{
 	text-align: center;
 	background-color: #800000;
 	border-radius: 8px;
+	margin: 0px;
 }
 body{
 	height: 100%;
@@ -37,10 +38,10 @@ button:active {
 #formTitle {
 	
 	color: #800000;
-	margin-bottom: 5px;
+	margin: 5px;
 }
 form {
-	
+	margin: 5px;
 	color: #800000;
 }
 
@@ -55,15 +56,30 @@ h2{
 
 }
 #firstName{
+	border: solid;
+	border-width: 1px;
+	border-radius: 10px;
+	border-color: #800000;
 	margin-left: 36%;
+	margin-bottom: -30px;
 }
 
 #lastName{
+	border: solid;
+	border-width: 1px;
+	border-radius: 10px;
+	border-color: #800000;
 	margin-left: 36%;
+	margin-bottom: -30px;
 }
 
 #phoneNumber{
+	border: solid;
+	border-width: 1px;
+	border-radius: 10px;
+	border-color: #800000;
 	margin-left: 36%;
+	margin-bottom: -30px;
 }
 #gender{
 	margin-left: 36%;
@@ -74,14 +90,19 @@ h2{
 	margin-bottom: 1%;
 }
 #legend{
-	text-align: ;
+	font-weight:bold;
 }
 h4{
 	text-align: center;
 	text-decoration: underline;
-	margin-bottom: 0px;
+	margin-top: 20px;
+	margin-bottom: 5px;
 }
 #position{
+	border: solid;
+	border-width: 1px;
+	border-radius: 10px;
+	border-color: #800000;
 	margin-left: 36%;
 
 }
@@ -118,6 +139,5 @@ h5{
   transform: translateY(4px);
 }
 #hiddenIframe{
-	width: -1000%;
-	height: -1000%;
+	height: 0px;
 }
