@@ -37,6 +37,7 @@ button:active {
 #formTitle {
 	
 	color: #800000;
+	margin-bottom: 5px;
 }
 form {
 	
@@ -46,6 +47,28 @@ form {
 #sportsForm{
 	
 }
+h2{
+	font-weight: 100;
+	font-size: 16;
+	margin-bottom: -10px; 
+	margin-left: 36%;
+
+}
+#firstName{
+	margin-left: 36%;
+}
+
+#lastName{
+	margin-left: 36%;
+}
+
+#phoneNumber{
+	margin-left: 36%;
+}
+#gender{
+	margin-left: 36%;
+}
+
 #sport{
 	margin-left: 35%;
 	margin-bottom: 1%;
@@ -56,6 +79,7 @@ form {
 h4{
 	text-align: center;
 	text-decoration: underline;
+	margin-bottom: 0px;
 }
 #position{
 	margin-left: 36%;
@@ -63,8 +87,37 @@ h4{
 }
 h5{
 	font-weight: 100;
-	font-size: 15;
+	font-size: 16;
 	margin: -5px; 
-	padding-left: 36%;
+	padding-left: 37%;
 
+}
+#submitBtn{
+		-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	border-color: #800000;
+	background-color: white;
+	display: block;
+	border-radius: 7px;
+	width: 15%; 
+	height: 5%;
+	margin: auto;
+	margin-top: 5px;
+	color: #800000;
+	font-size: 14;
+	font-weight: 700;
+}
+#submitBtn:hover{
+	background-color: #800000;
+	color: white;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#submitBtn:active {
+  background-color: #800000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#hiddenIframe{
+	width: -1000%;
+	height: -1000%;
 }
