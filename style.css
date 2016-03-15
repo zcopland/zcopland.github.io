@@ -35,10 +35,36 @@ button:active {
   transform: translateY(4px);
 }
 #formTitle {
-	text-align: left;
+	
 	color: #800000;
 }
 form {
-	text-align: left;
+	
 	color: #800000;
+}
+
+#sportsForm{
+	
+}
+#sport{
+	margin-left: 35%;
+	margin-bottom: 1%;
+}
+#legend{
+	text-align: ;
+}
+h4{
+	text-align: center;
+	text-decoration: underline;
+}
+#position{
+	margin-left: 36%;
+
+}
+h5{
+	font-weight: 100;
+	font-size: 15;
+	margin: -5px; 
+	padding-left: 36%;
+
 }
