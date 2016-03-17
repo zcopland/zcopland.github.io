@@ -180,7 +180,7 @@ h5{
 	background-color: white;
 	color: #800000;
 	display: inline-block;
-	margin-top: 28%;
+	margin-top: 15%;
 	margin-left: 0px;
 	height: 5%;
 	width: 15%;
@@ -197,3 +197,11 @@ h5{
   background-color: #800000;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+ #addBtn{
+ 	display: block;
+ 	margin: auto;
+ 	margin-top: 1%;
+ 	height: 5%;
+ 	width: 15%;
+ }
