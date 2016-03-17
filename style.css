@@ -117,11 +117,35 @@ h5{
 }
 
 #sBackBtn{
+	
+		-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	border-color: #800000;
+	background-color: white;
+	display: inline-block;
+	border-radius: 7px;
+	width: 20%; 
+	height: 8%;
+	color: #800000;
 	display: inline-block;
 	width: 15%; 
 	height: 5%;
 	font-size: 18;
+	font-weight: bold;
 }
+#sBackBtn:hover{
+	background-color: #800000;
+	color: white;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+
+}
+#submitBtn:active {
+  background-color: #800000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 #submitBtn{
 		-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
@@ -151,7 +175,7 @@ h5{
 }
 #backBtn{
 	display: inline-block;
-	margin-top: 30%;
+	margin-top: 28%;
 	margin-left: 0px;
 	height: 5%;
 	width: 15%;
