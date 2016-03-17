@@ -14,3 +14,8 @@ function signUp () {
 	//clearing the form
 	form.reset();
 }
+
+var sBackBtn = document.getElementById("sBackBtn");
+  sBackBtn.addEventListener("click", function () {
+    location.href="index.html";
+});

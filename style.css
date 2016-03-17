@@ -4,7 +4,7 @@ h1{
 	text-align: center;
 	background-color: #800000;
 	border-radius: 8px;
-	margin: 0px;
+	margin: 10px;
 }
 body{
 	height: 100%;
@@ -24,6 +24,7 @@ button{
 	color: #800000;
 	font-size: 25;
 	font-weight: 700;
+	margin-top: 5%;
 }
 button:hover{
 	background-color: #800000;
@@ -46,7 +47,7 @@ form {
 }
 
 #sportsForm{
-	
+	margin: 0px;
 }
 h2{
 	font-weight: 100;
@@ -86,15 +87,16 @@ h2{
 }
 
 #sport{
-	margin-left: 35%;
+	margin-left: 36%;
 	margin-bottom: 1%;
 }
 #legend{
 	font-weight:bold;
 }
 h4{
-	text-align: center;
+	
 	text-decoration: underline;
+	margin-left: 40%; 
 	margin-top: 20px;
 	margin-bottom: 5px;
 }
@@ -113,20 +115,26 @@ h5{
 	padding-left: 37%;
 
 }
+
+#sBackBtn{
+	display: inline-block;
+	width: 15%; 
+	height: 5%;
+	font-size: 18;
+}
 #submitBtn{
 		-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 	border-color: #800000;
 	background-color: white;
-	display: block;
+	display: inline-block;
 	border-radius: 7px;
-	width: 15%; 
-	height: 5%;
-	margin: auto;
-	margin-top: 5px;
+	width: 20%; 
+	height: 8%;
 	color: #800000;
-	font-size: 14;
+	font-size: 18;
 	font-weight: 700;
+	margin-left: 22%;
 }
 #submitBtn:hover{
 	background-color: #800000;
@@ -140,4 +148,13 @@ h5{
 }
 #hiddenIframe{
 	height: 0px;
+}
+#backBtn{
+	display: inline-block;
+	margin-top: 30%;
+	margin-left: 0px;
+	height: 5%;
+	width: 15%;
+	font-size: 18;
+	font-weight: bold;
 }
