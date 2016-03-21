@@ -1,14 +1,21 @@
+var gender = 0;
+function handleClick(genderRad) {
+	gender = genderRad.value;
+	console.log(gender);
+}
+var sport = 0;
+function handleClick2(sportRad) {
+	sport = sportRad.value;
+	console.log(sport);
+}
+
 function signUp () {
 	//Declaring all variables
 	var firstName = document.getElementById("firstName").value;
 	var lastName = document.getElementById("lastName").value;
 	var phoneNumber = document.getElementById("phoneNumber").value;
-	var gender = document.getElementById("gender").value;
-	var sport = document.getElementById("sport").value;
 	var position = document.getElementById("position").value;
 	var form = document.getElementById("sportsForm");
-
-
 
 	//displaying content in the fields
 	alert(firstName + " " + lastName + " is a " + gender + " and wants to participate in " + sport + ". They can be reached at " + phoneNumber);
