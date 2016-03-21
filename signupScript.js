@@ -1,3 +1,56 @@
+//getting a handle on ALL sports
+var outdoorTrackRad = document.getElementById("outdoorTrackRad");
+var outdoorTrackLabel = document.getElementById("outdoorTrackLabel");
+
+var baseballRad = document.getElementById("baseballRad");
+var baseballLabel = document.getElementById("baseballLabel");
+
+var nordicSkiRad = document.getElementById("nordicSkiRad");
+var nordicSkiLabel = document.getElementById("nordicSkiLabel");
+
+var basketballRad = document.getElementById("basketballRad");
+var basketballLabel = document.getElementById("basketballLabel");
+
+var indoorTrackRad = document.getElementById("indoorTrackRad");
+var indoorTrackLabel = document.getElementById("indoorTrackLabel");
+
+var cheeringRad = document.getElementById("cheeringRad");
+var cheeringLabel = document.getElementById("cheeringLabel");
+
+var alpineSkiRad = document.getElementById("alpineSkiRad");
+var alpineSkiLabel = document.getElementById("alpineSkiLabel");
+
+var hockeyRad = document.getElementById("hockeyRad");
+var hockeyLabel = document.getElementById("hockeyLabel");
+
+var fieldHockeyRad = document.getElementById("fieldHockeyRad");
+var fieldHockeyLabel = document.getElementById("fieldHockeyLabel");
+
+var swimmingRad = document.getElementById("swimmingRad");
+var swimmingLabel = document.getElementById("swimmingLabel");
+
+var crossCountryRad = document.getElementById("crossCountryRad");
+var crossCountryLabel = document.getElementById("crossCountryLabel");
+
+var footballRad = document.getElementById("footballRad");
+var footballLabel = document.getElementById("footballLabel");
+
+var soccerRad = document.getElementById("soccerRad");
+var soccerLabel = document.getElementById("soccerLabel");
+
+var golfRad = document.getElementById("golfRad");
+var golfLabel = document.getElementById("golfLabel");
+
+var lacrossRad = document.getElementById("lacrossRad");
+var lacrossLabel = document.getElementById("lacrossLabel");
+//end of sport variables
+
+//creating arrays for Rad & Labels
+var sportRadArray = [outdoorTrackRad, baseballRad, nordicSkiRad, basketballRad, indoorTrackRad, cheeringRad, alpineSkiRad, hockeyRad, fieldHockeyRad, swimmingRad, crossCountryRad, footballRad, soccerRad, golfRad, lacrossRad];
+var sportLabelArray = [outdoorTrackLabel, baseballLabel, nordicSkiLabel, basketballLabel, indoorTrackLabel, cheeringLabel, alpineSkiLabel, hockeyLabel, fieldHockeyLabel, swimmingLabel, crossCountryLabel, footballLabel, soccerLabel, golfLabel, lacrossLabel];
+
+
+//functions for the changed values for radio buttons
 var gender = 0;
 function handleClick(genderRad) {
 	gender = genderRad.value;
@@ -68,4 +121,18 @@ function signUp () {
 var sBackBtn = document.getElementById("sBackBtn");
   sBackBtn.addEventListener("click", function () {
     location.href="index.html";
+});
+
+var editBtn = document.getElementById("editBtn");
+editBtn.addEventListener("click", function() {
+	var sportChange = prompt("What sport would you like to change?", "basketball").toLowerCase();
+	console.log(sportChange);
+	for (var i = 0; i < sportRadArray.length; i++) {
+		for (var j = 0; j < sportChange.length; j++) {
+			if (sportRadArray[i].indexOf(j) === sportChange.indexOf(j)) {
+				console.log("Sucess!");
+			} 
+		}
+		
+	}
 });

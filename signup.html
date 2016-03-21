@@ -27,16 +27,88 @@
 			<legend id="legend">Sport Information</legend>
 			<h4>Sports</h4><br>
 
-			<input type="radio" name="sport" id="sport" value="Track" onclick="handleClick2(this)">Track & Field</input><br>
-			<input type="radio" name="sport" id="sport" value="Baseball" onclick="handleClick2(this)">Baseball</input><br>
-			<input type="radio" name="sport" id="sport" value="Lacrosse" onclick="handleClick2(this)">Lacrosse</input><br><br>
+			<!-- Outdoor Track -->
+			<input type="radio" name="sport" class="sport" id="outdoorTrackRad" value="Outdoor Track" onclick="handleClick2(this)">
+				<label id="outdoorTrackLabel" class="radLabel" style="margin-left: 0px">Outdoor Track</label>
+			</input><br>
+
+			<!-- Baseball -->
+			<input type="radio" name="sport" class="sport" id="baseballRad" value="Baseball" onclick="handleClick2(this)">
+				<label id="baseballLabel" class="radLabel" style="margin-left: 0px">Baseball</label>
+			</input><br>
+
+			<!-- Nordic Ski -->
+			<input type="radio" name="sport" class="sport" id="nordicSkiRad" value="Nordic Ski" onclick="handleClick2(this)">
+				<label id="nordicSkiLabel" class="radLabel" style="margin-left: 0px">Nordic Ski</label>
+			</input><br>
+
+			<!-- Basketball -->
+			<input type="radio" name="sport" class="sport" id="basketballRad" value="Basketball" onclick="handleClick2(this)">
+				<label id="basketballLabel" class="radLabel" style="margin-left: 0px">Basketball</label>
+			</input><br>
+
+			<!-- Indoor Track -->
+			<input type="radio" name="sport" class="sport" id="indoorTrackRad" value="Indoor Track" onclick="handleClick2(this)">
+				<label id="indoorTrackLabel" class="radLabel" style="margin-left: 0px">Indoor Track</label>
+			</input><br>
+
+			<!-- Cheering -->
+			<input type="radio" name="sport" class="sport" id="cheeringRad" value="Cheering" onclick="handleClick2(this)">
+				<label id="cheeringLabel" class="radLabel" style="margin-left: 0px">Cheering</label>
+			</input><br>
+
+			<!-- Alpine Ski -->
+			<input type="radio" name="sport" class="sport" id="alpineSkiRad" value="Alpine Ski" onclick="handleClick2(this)">
+				<label id="alpineSkiLabel" class="radLabel" style="margin-left: 0px">Alpine Ski</label>
+			</input><br>
+
+			<!-- Hockey -->
+			<input type="radio" name="sport" class="sport" id="hockeyRad" value="Hockey" onclick="handleClick2(this)">
+				<label id="hockeyLable" class="radLabel" style="margin-left: 0px">Hockey</label>
+			</input><br>
+
+			<!-- Field Hockey -->
+			<input type="radio" name="sport" class="sport" id="fieldHockeyRad" value="Field Hockey" onclick="handleClick2(this)">
+				<label id="fieldHockeyLabel" class="radLabel" style="margin-left: 0px">Field Hockey</label>
+			</input><br>
+
+			<!-- Swimming -->
+			<input type="radio" name="sport" class="sport" id="swimmingRad" value="Swimming" onclick="handleClick2(this)">
+				<label id="swimmingLabel" class="radLabel" style="margin-left: 0px">Swimming</label>
+			</input><br>
+
+			<!-- Cross Country -->
+			<input type="radio" name="sport" class="sport" id="crossCountryRad" value="Cross Country" onclick="handleClick2(this)">
+				<label id="crossCountryLabel" class="radLabel" style="margin-left: 0px">Cross Country</label>
+			</input><br>
+
+			<!-- Football -->
+			<input type="radio" name="sport" class="sport" id="footballRad" value="Football" onclick="handleClick2(this)">
+				<label id="footballLabel" class="radLabel" style="margin-left: 0px">Football</label>
+			</input><br>
+
+			<!-- Soccer -->
+			<input type="radio" name="sport" class="sport" id="soccerRad" value="Soccer" onclick="handleClick2(this)">
+				<label id="soccerLabel" class="radLabel" style="margin-left: 0px">Soccer</label>
+			</input><br>
+
+			<!-- Golf -->
+			<input type="radio" name="sport" class="sport" id="golfRad" value="Golf" onclick="handleClick2(this)">
+				<label id="golfLabel" class="radLabel" style="margin-left: 0px">Golf</label>
+			</input><br>
+
+			<!-- Lacrosse -->
+			<input type="radio" name="sport" class="sport" id="lacrossRad" value="Lacrosse" onclick="handleClick2(this)">
+				<label id="lacrossLabel" class="radLabel" style="margin-left: 0px">Lacross</label>
+			</input><br><br>
+
 			<h5>Position(optional):</h5><br>
 			<input type="text" name="position" id="position" placeholder="Center"></input><br><br>
 		</fieldset>
 
 		<input type="button" name="sBackBtn" value="Home" id="sBackBtn" onclick="sBackBtn" />
-
 		<input type="button" name="submit" value="Submit" id="submitBtn" onclick="signUp()" />
+		<input type="button" name="edit" value="Edit" id="editBtn" onclick="editBtn" />
 	</form>
 
 	<script type="text/javascript" src= "signupScript.js"></script>
