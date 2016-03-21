@@ -12,11 +12,11 @@
 		<fieldset>
 			<legend id="legend">Personal Information</legend>
 			<h2>First Name:</h2><br>
-			<input type="text" name="firstName" id="firstName" /><br><br>
+			<input type="text" name="firstName" id="firstName" placeholder="John" /><br><br>
 			<h2>Last Name:</h2><br>
-			<input text="text" name="lastName" id="lastName" /><br><br>
+			<input text="text" name="lastName" id="lastName" placeholder="Doe"/><br><br>
 			<h2>Phone Number:</h2><br>
-			<input type="tel" name="phoneNumber" id="phoneNumber" /><br><br>
+			<input type="tel" name="phoneNumber" id="phoneNumber" placeholder="2077838528" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/><br><br>
 			<h2>Gender:</h2><br>
 			
 			<input type="radio" name="gender" id="gender" value="Male" onclick="handleClick(this)">Male</input><br>
@@ -31,7 +31,7 @@
 			<input type="radio" name="sport" id="sport" value="Baseball" onclick="handleClick2(this)">Baseball</input><br>
 			<input type="radio" name="sport" id="sport" value="Lacrosse" onclick="handleClick2(this)">Lacrosse</input><br><br>
 			<h5>Position(optional):</h5><br>
-			<input type="text" name="position" id="position"></input><br><br>
+			<input type="text" name="position" id="position" placeholder="Center"></input><br><br>
 		</fieldset>
 
 		<input type="button" name="sBackBtn" value="Home" id="sBackBtn" onclick="sBackBtn" />

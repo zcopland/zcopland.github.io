@@ -8,6 +8,12 @@ function handleClick2(sportRad) {
 	sport = sportRad.value;
 	console.log(sport);
 }
+function numberFunction(e) {
+	if(!((e.keyCode >= 48) && (e.keyCode <= 57))){
+		e.returnValue = false;
+		return;
+	}
+}
 
 function signUp () {
 	//Declaring all variables
