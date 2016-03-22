@@ -48,7 +48,7 @@ var lacrossLabel = document.getElementById("lacrossLabel");
 //creating arrays for Rad & Labels
 var sportRadArray = [outdoorTrackRad, baseballRad, nordicSkiRad, basketballRad, indoorTrackRad, cheeringRad, alpineSkiRad, hockeyRad, fieldHockeyRad, swimmingRad, crossCountryRad, footballRad, soccerRad, golfRad, lacrossRad];
 var sportLabelArray = [outdoorTrackLabel, baseballLabel, nordicSkiLabel, basketballLabel, indoorTrackLabel, cheeringLabel, alpineSkiLabel, hockeyLabel, fieldHockeyLabel, swimmingLabel, crossCountryLabel, footballLabel, soccerLabel, golfLabel, lacrossLabel];
-
+var sportsArray = ["outdoor track", "baseball", "nordic ski", "basketball", "indoor track", "cheering", "alpine ski", "hockey", "field hockey", "swimming", "cross country", "football", "soccer", "golf", "lacrosse"];
 
 //functions for the changed values for radio buttons
 var gender = 0;
@@ -61,12 +61,7 @@ function handleClick2(sportRad) {
 	sport = sportRad.value;
 	console.log(sport);
 }
-function numberFunction(e) {
-	if(!((e.keyCode >= 48) && (e.keyCode <= 57))){
-		e.returnValue = false;
-		return;
-	}
-}
+
 
 function signUp () {
 	//Declaring all variables
@@ -123,16 +118,53 @@ var sBackBtn = document.getElementById("sBackBtn");
     location.href="index.html";
 });
 
+var attempts = 0;
 var editBtn = document.getElementById("editBtn");
 editBtn.addEventListener("click", function() {
-	var sportChange = prompt("What sport would you like to change?", "basketball").toLowerCase();
-	console.log(sportChange);
-	for (var i = 0; i < sportRadArray.length; i++) {
-		for (var j = 0; j < sportChange.length; j++) {
-			if (sportRadArray[i].indexOf(j) === sportChange.indexOf(j)) {
-				console.log("Sucess!");
-			} 
+	var pass1 = "password1";
+	var pass2 = "password2";
+	var password = prompt("Please enter password:", "").toLowerCase(); //asking for password
+	//checking to see if password is correct
+	if (password == pass1 || password == pass2) {
+		//access granted
+		var indexResult;
+		var sportChange = prompt("What sport would you like to change?", "basketball").toLowerCase();
+		console.log(sportChange);
+		for (var i = 0; i < sportsArray.length; i++) {
+			var result = sportsArray[i].toString().startsWith(sportChange);
+			if (result) {
+				console.log("Found it!");
+				indexResult = i;
+				console.log(indexResult);
+			}
 		}
-		
+		//sport is not found
+		if (indexResult == null) {
+			alert("Please make sure the sport is spelled correctly!");
+		}
+
+		//Setting Radio Button Style
+		if (sportRadArray[indexResult].style.display == "none") {
+			sportRadArray[indexResult].style.display = "inline";
+		} else if (sportRadArray[indexResult].style.display !== "none") {
+			sportRadArray[indexResult].style.display = "none";
+		}
+		//Setting Lable Style
+		if (sportLabelArray[indexResult].style.display == "none") {
+			sportLabelArray[indexResult].style.display = "inline";
+		} else if (sportLabelArray[indexResult].style.display !== "none") {
+			sportLabelArray[indexResult].style.display = "none";
+		}
+	} 
+	//password was entered incorrectly
+	else {
+		alert("Password Incorrect.");
+		attempts++;
+		//locking user out for too many attempts
+		if (attempts > 3) {
+			editBtn.style.display = "none";
+			alert("You've been locked out.");
+		}
 	}
+	
 });
