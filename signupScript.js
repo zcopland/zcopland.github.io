@@ -5,6 +5,9 @@ var outdoorTrackLabel = document.getElementById("outdoorTrackLabel");
 var baseballRad = document.getElementById("baseballRad");
 var baseballLabel = document.getElementById("baseballLabel");
 
+var softballRad = document.getElementById("softballRad");
+var softballLabel = document.getElementById("softballLabel");
+
 var nordicSkiRad = document.getElementById("nordicSkiRad");
 var nordicSkiLabel = document.getElementById("nordicSkiLabel");
 
@@ -46,9 +49,9 @@ var lacrossLabel = document.getElementById("lacrossLabel");
 //end of sport variables
 
 //creating arrays for Rad & Labels
-var sportRadArray = [outdoorTrackRad, baseballRad, nordicSkiRad, basketballRad, indoorTrackRad, cheeringRad, alpineSkiRad, hockeyRad, fieldHockeyRad, swimmingRad, crossCountryRad, footballRad, soccerRad, golfRad, lacrossRad];
-var sportLabelArray = [outdoorTrackLabel, baseballLabel, nordicSkiLabel, basketballLabel, indoorTrackLabel, cheeringLabel, alpineSkiLabel, hockeyLabel, fieldHockeyLabel, swimmingLabel, crossCountryLabel, footballLabel, soccerLabel, golfLabel, lacrossLabel];
-var sportsArray = ["outdoor track", "baseball", "nordic ski", "basketball", "indoor track", "cheering", "alpine ski", "hockey", "field hockey", "swimming", "cross country", "football", "soccer", "golf", "lacrosse"];
+var sportRadArray = [outdoorTrackRad, baseballRad, softballRad, nordicSkiRad, basketballRad, indoorTrackRad, cheeringRad, alpineSkiRad, hockeyRad, fieldHockeyRad, swimmingRad, crossCountryRad, footballRad, soccerRad, golfRad, lacrossRad];
+var sportLabelArray = [outdoorTrackLabel, baseballLabel, softballLabel, nordicSkiLabel, basketballLabel, indoorTrackLabel, cheeringLabel, alpineSkiLabel, hockeyLabel, fieldHockeyLabel, swimmingLabel, crossCountryLabel, footballLabel, soccerLabel, golfLabel, lacrossLabel];
+var sportsArray = ["outdoor track", "baseball", "softball", "nordic ski", "basketball", "indoor track", "cheering", "alpine ski", "hockey", "field hockey", "swimming", "cross country", "football", "soccer", "golf", "lacrosse"];
 
 //functions for the changed values for radio buttons
 var gender = 0;
