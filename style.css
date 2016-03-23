@@ -48,7 +48,7 @@ form {
 }
 
 #sportsForm{
-	margin: 0px;
+	
 }
 h2{
 	font-weight: 100;
@@ -87,9 +87,12 @@ h2{
 	margin-left: 36%;
 }
 
-.sport, .radLabel{
+.sport, .radLabel {
 	margin-left: 36%;
 	margin-bottom: 1%;
+}
+.sportDiv {
+	display: block;
 }
 #legend{
 	font-weight:bold;
