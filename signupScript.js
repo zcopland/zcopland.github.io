@@ -119,23 +119,22 @@ var sBackBtn = document.getElementById("sBackBtn");
 });
 
 var attempts = 0;
+var parent = document.getElementById("parent");
+var pass1 = "p1";
+var recoveryPass = "asdR3c0very";
 var editBtn = document.getElementById("editBtn");
 editBtn.addEventListener("click", function() {
-	var pass1 = "password1";
-	var pass2 = "password2";
-	var password = prompt("Please enter password:", "").toLowerCase(); //asking for password
+	var password = prompt("Please enter password:", ""); //asking for password
 	//checking to see if password is correct
-	if (password == pass1 || password == pass2) {
+	if (password == pass1) {
 		//access granted
 		var indexResult;
-		var sportChange = prompt("What sport would you like to change?", "basketball").toLowerCase();
-		console.log(sportChange);
+		var sportChange = prompt("What sport would you like to add/remove?", "basketball").toLowerCase();
 		for (var i = 0; i < sportsArray.length; i++) {
 			var result = sportsArray[i].toString().startsWith(sportChange);
 			if (result) {
 				console.log("Found it!");
 				indexResult = i;
-				console.log(indexResult);
 			}
 		}
 		//sport is not found
@@ -154,13 +153,19 @@ editBtn.addEventListener("click", function() {
 			sportLabelArray[indexResult].style.display = "inline";
 		} else if (sportLabelArray[indexResult].style.display !== "none") {
 			sportLabelArray[indexResult].style.display = "none";
-		}
+		} 
 	} 
+	//recovery password initiated
+	if (password == recoveryPass) {
+		var newPass = prompt("You have initiated the recovery password. What would you like to change the existing password to?", "");
+		pass1 = newPass;
+		alert("Password has been successfully changed.")
+	}
 	//password was entered incorrectly
-	else {
+	else if (password !== pass1 && password !== recoveryPass) {
 		alert("Password Incorrect.");
 		attempts++;
-		//locking user out for too many attempts
+		//locking user out for too many failed attempts
 		if (attempts > 3) {
 			editBtn.style.display = "none";
 			alert("You've been locked out.");
@@ -168,3 +173,4 @@ editBtn.addEventListener("click", function() {
 	}
 	
 });
+
