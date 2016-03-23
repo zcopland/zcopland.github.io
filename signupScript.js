@@ -145,6 +145,9 @@ var attempts = 0;
 var parent = document.getElementById("parent");
 var pass1 = "p1";
 var recoveryPass = "asdR3c0very";
+var springDIV = document.getElementById("springDIV");
+var winterDIV = document.getElementById("winterDIV");
+var fallDIV = document.getElementById("fallDIV");
 var editBtn = document.getElementById("editBtn");
 editBtn.addEventListener("click", function() {
 	var password = prompt("Please enter password:", ""); //asking for password
@@ -167,39 +170,24 @@ editBtn.addEventListener("click", function() {
 
 		if (indexResult == 0) {
 			//spring
-			console.log("spring");
-			for (var i = 0; i < winterSeason.length; i++) {
-				winterSeason[i].style.display = "none";
-			};
-			/*
-			for (var i = 0; i < fallSeason.length; i++) {
-				fallSeason[i].style.display = "none";
-			}; */
+			springDIV.style.display = "inline";
+			fallDIV.style.display = "none";
+			winterDIV.style.display = "none";
 
 		} else if (indexResult == 1) {
 			//fall
-			console.log("fall");
-
+			springDIV.style.display = "none";
+			fallDIV.style.display = "inline";
+			winterDIV.style.display = "none";
 
 		} else if (indexResult == 2) {
 			//winter
-			console.log("winter");
-
+			springDIV.style.display = "none";
+			fallDIV.style.display = "none";
+			winterDIV.style.display = "inline";
 
 		}
-
-		//Setting Radio Button Style
-		if (sportRadArray[indexResult].style.display == "none") {
-			sportRadArray[indexResult].style.display = "inline";
-		} else if (sportRadArray[indexResult].style.display !== "none") {
-			sportRadArray[indexResult].style.display = "none";
-		}
-		//Setting Lable Style
-		if (sportLabelArray[indexResult].style.display == "none") {
-			sportLabelArray[indexResult].style.display = "inline";
-		} else if (sportLabelArray[indexResult].style.display !== "none") {
-			sportLabelArray[indexResult].style.display = "none";
-		} 
+		
 	} 
 	//recovery password initiated
 	if (password == recoveryPass) {
