@@ -5,3 +5,11 @@ var backBtn = document.getElementById("backBtn");
     console.log("click");
 
 });
+
+var myCalendar = document.getElementById("myCalendar");
+  myCalendar.addEventListener("click", function () {
+    location.href="myCalendar.html";
+    console.log("click");
+
+});
+  
