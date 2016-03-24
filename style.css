@@ -3,7 +3,7 @@ h1{
 	font-size: 75;
 	text-align: center;
 	background-color: #800000;
-	border-radius: 8px;
+	border-radius: 20px;
 	border: solid;
 	border-color: black;
 	border-width: 2px;
@@ -20,7 +20,7 @@ button{
 	border-color: #800000;
 	background-color: white;
 	display: block;
-	border-radius: 20px;
+	border-radius: 50px;
 	width: 50%; 
 	height: 20%;
 	margin: auto;
@@ -28,7 +28,7 @@ button{
 	color: #800000;
 	font-size: 25;
 	font-weight: 700;
-	margin-top: 5%;
+	margin-top: 8%;
 }
 button:hover{
 	background-color: #800000;
