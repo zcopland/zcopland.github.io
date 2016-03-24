@@ -1,6 +1,6 @@
 h1{
 	color: white;
-	font-size: 75;
+	font-size: 100;
 	text-align: center;
 	background-color: #800000;
 	border-radius: 20px;
@@ -8,6 +8,8 @@ h1{
 	border-color: black;
 	border-width: 2px;
 	margin: 10px;
+	height:20%;
+	padding-top: 4%
 }
 body{
 	height: 100%;
