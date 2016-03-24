@@ -210,7 +210,7 @@ h5{
  	margin: auto;
  	margin-top: 1%;
  	height: 100%;
- 	width: 50%;
+ 	width: 75%;
  	border-color: #800000;
  	border-radius: 8px;
  	color: #800000;
@@ -239,8 +239,8 @@ h5{
     padding: 0%;
     display: table;
     width: 100%;
-    height: 8%;
-    margin: 0%;
+    height: 10%;
+    margin-bottom: 5%;
     content: 0%;
 }
 #left-cell {
