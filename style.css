@@ -4,6 +4,9 @@ h1{
 	text-align: center;
 	background-color: #800000;
 	border-radius: 8px;
+	border: solid;
+	border-color: black;
+	border-width: 2px;
 	margin: 10px;
 }
 body{
@@ -17,7 +20,7 @@ button{
 	border-color: #800000;
 	background-color: white;
 	display: block;
-	border-radius: 7px;
+	border-radius: 20px;
 	width: 50%; 
 	height: 20%;
 	margin: auto;
@@ -52,7 +55,7 @@ form {
 }
 h2{
 	font-weight: 100;
-	font-size: 16;
+	font-size: 30;
 	margin-bottom: -10px; 
 	margin-left: 36%;
 
@@ -64,6 +67,7 @@ h2{
 	border-color: #800000;
 	margin-left: 36%;
 	margin-bottom: -30px;
+	font-size:30px;
 }
 
 #lastName{
@@ -73,6 +77,7 @@ h2{
 	border-color: #800000;
 	margin-left: 36%;
 	margin-bottom: -30px;
+	font-size: 30px;
 }
 
 #phoneNumber{
@@ -82,14 +87,21 @@ h2{
 	border-color: #800000;
 	margin-left: 36%;
 	margin-bottom: -30px;
+	font-size: 30;
 }
 #gender{
 	margin-left: 36%;
+	margin-top: 5%;
+	font-size: 20;
+}
+#male,#female{
+	font-size: 30;
 }
 
 .sport, .radLabel {
 	margin-left: 36%;
-	margin-bottom: 1%;
+	margin-bottom: 3%;
+	font-size: 30;
 }
 .sportDiv {
 	display: block;
@@ -103,6 +115,7 @@ h4{
 	margin-left: 40%; 
 	margin-top: 20px;
 	margin-bottom: 5px;
+	font-size: 30;
 }
 #position{
 	border: solid;
@@ -110,6 +123,7 @@ h4{
 	border-radius: 10px;
 	border-color: #800000;
 	margin-left: 36%;
+	font-size: 30;
 
 }
 h5{
@@ -117,6 +131,7 @@ h5{
 	font-size: 16;
 	margin: -5px; 
 	padding-left: 37%;
+	font-size: 30;
 
 }
 
@@ -275,7 +290,7 @@ h5{
 	background-color: white;
 	display: block;
 	border-radius: 7px;
-	width: 50%; 
+	width: 90%; 
 	height: 20%;
 	margin: auto;
 	margin-bottom: 20px;

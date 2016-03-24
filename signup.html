@@ -18,8 +18,8 @@
 			<h2>Phone Number:</h2><br>
 			<input type="tel" name="phoneNumber" id="phoneNumber" placeholder="2077838528" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/><br><br>
 			<h2>Gender:</h2><br>
-			<input type="radio" name="gender" id="gender" value="Male" onclick="handleClick(this)">Male</input><br>
-			<input type="radio" name="gender" id="gender" value="Female" onclick="handleClick(this)">Female</input><br><br>
+			<input type="radio" name="gender" id="gender" value="Male" onclick="handleClick(this)" class="male"><label id="male"> Male</label></input ><br>
+			<input type="radio" name="gender" id="gender" value="Female" onclick="handleClick(this)" class="female"><label id="female">Female</label></input><br><br>
 		</fieldset>
 
 		<fieldset id="parent">
@@ -155,6 +155,7 @@
 	</form>
 
 	<script type="text/javascript" src= "signupScript.js"></script>
-	
+	<script type="text/javascript" src= "loadSeason.js"></script>
+
 </body>
 </html>
