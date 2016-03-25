@@ -86,6 +86,45 @@ function handleClick2(sportRad) {
 }
 
 
+//searching through the spreadsheet to find the current season
+var currentSeason;
+$.ajax("https://docs.google.com/spreadsheets/d/1SNB4cCeOmEPDNRsLIopOX-FaCIyw5ebncwXU8DBymec/edit?usp=sharing").done(function(text){
+    var spring = text.search("spring");
+    var fall = text.search("fall");
+    var winter = text.search("winter");
+    if (spring != -1) {
+    	console.log("found spring");
+    	showSpring();
+    } else {
+    	if (fall != -1) {
+    		console.log("found fall");
+    		showFall();
+    	} else {
+    		if (winter != -1) {
+    			console.log("found winter");
+    			showWinter();
+    		}
+    	}
+    }
+});
+//figuring out which season to display
+function showSpring () {
+	springDIV.style.display = "inline";
+	fallDIV.style.display = "none";
+	winterDIV.style.display = "none";
+}
+function showWinter() {
+	springDIV.style.display = "none";
+	fallDIV.style.display = "none";
+	winterDIV.style.display = "inline";
+}
+function showFall () {
+	springDIV.style.display = "none";
+	fallDIV.style.display = "inline";
+	winterDIV.style.display = "none";
+}
+
+
 function signUp () {
 	//Declaring all variables
 	var firstName = document.getElementById("firstName").value;
@@ -168,25 +207,7 @@ editBtn.addEventListener("click", function() {
 			alert("Please make sure the season is spelled correctly!");
 		}
 
-		if (indexResult == 0) {
-			//spring
-			springDIV.style.display = "inline";
-			fallDIV.style.display = "none";
-			winterDIV.style.display = "none";
-
-		} else if (indexResult == 1) {
-			//fall
-			springDIV.style.display = "none";
-			fallDIV.style.display = "inline";
-			winterDIV.style.display = "none";
-
-		} else if (indexResult == 2) {
-			//winter
-			springDIV.style.display = "none";
-			fallDIV.style.display = "none";
-			winterDIV.style.display = "inline";
-
-		}
+		
 		
 	} 
 	//recovery password initiated
