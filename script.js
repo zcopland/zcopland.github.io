@@ -63,11 +63,11 @@ window.addEventListener('load', function () {
   });
   var calendarBtn = document.getElementsByTagName("button")[1];
   calendarBtn.addEventListener("click", function () {
-    location.href="calendar.html";
+    location.href="Calendar/calendar.html";
   });
   var signupBtn = document.getElementById("signupBtn");
   signupBtn.addEventListener("click", function () {
-    location.href="signup.html";
+    location.href="SignUp/signup.html";
   })
 
 });
