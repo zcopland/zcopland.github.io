@@ -86,27 +86,94 @@ function handleClick2(sportRad) {
 }
 
 
+// var url = 'https://spreadsheets.google.com/feeds/list/1SNB4cCeOmEPDNRsLIopOX-FaCIyw5ebncwXU8DBymec/od6/public/values?alt=json-in-script&callback=?';
+// jQuery.getJSON(url).success(function(data) {
+//     console.log(data); 
+// }).error(function(message) {
+//     console.error('error' + message); 
+// }).complete(function() {
+//     console.log('completed!'); 
+// });
+
+
+// START OF DATA GET CODE
+function mapEntries(json, realrowlength, skip){
+  if (!skip) skip = 0;
+  var dataframe = [ ];
+  
+  var row = [ ];
+  for (var i=0; i < json.feed.entry.length; i++) {
+    var entry = json.feed.entry[i];
+    if (entry.gs$cell.col == '1') {
+      if (row !== null) {
+        if ((!realrowlength || row.length === realrowlength) && (skip  === 0)){
+           dataframe.push(row);
+        } else {
+           if (skip > 0) skip--;
+        }
+      }
+      row = [ ];
+    }
+    row.push(entry.content.$t);
+  } 
+  dataframe.push(row);
+  return dataframe;
+}
+
+
+//Do Something with Data Tree
+function doSomethingWithDataTree(root){
+
+	console.log(root);
+}
+
+
+function onGoogleSheetReady(data){
+  //
+  // Convert the JSON into a nice array
+  //
+  var dataframe = mapEntries(data,null,1);
+  //
+  // Build a "tree" from each of the data rows 
+  //
+  // Each leaf in the tree has a name, price and exchange
+  //
+  var root =  {};
+    root.name = "Player Data";
+    root.children = [ ];
+    for (i=0;i<dataframe.length;i++){
+      var item = {};
+      item.name = dataframe[i][0]; // we must use "value" instead of price since that is what the layout requires
+      root.children.push(item);
+    }
+  console.log(root); 
+    
+  //
+  // Do something with the data tree
+  //
+  doSomethingWithDataTree(root);
+}
+
+
+
+function getScoreData(){
+  if (container) {
+     container.parentNode.removeChild(container);
+    }
+  
+  var container = document.createElement('div');
+  document.body.appendChild(container);
+  var googleSSI = document.createElement('script');
+  googleSSI.src = "https://spreadsheets.google.com/feeds/cells/1SNB4cCeOmEPDNRsLIopOX-FaCIyw5ebncwXU8DBymec/od6/public/values?alt=json-in-script&callback=onGoogleSheetReady";
+  container.appendChild(googleSSI);
+    
+}
+
+getScoreData();
 //searching through the spreadsheet to find the current season
 var currentSeason;
-$.ajax("https://docs.google.com/spreadsheets/d/1SNB4cCeOmEPDNRsLIopOX-FaCIyw5ebncwXU8DBymec/edit?usp=sharing").done(function(text){
-    var spring = text.search("spring");
-    var fall = text.search("fall");
-    var winter = text.search("winter");
-    if (spring != -1) {
-    	console.log("found spring");
-    	showSpring();
-    } else {
-    	if (fall != -1) {
-    		console.log("found fall");
-    		showFall();
-    	} else {
-    		if (winter != -1) {
-    			console.log("found winter");
-    			showWinter();
-    		}
-    	}
-    }
-});
+
+
 //figuring out which season to display
 function showSpring () {
 	springDIV.style.display = "inline";
