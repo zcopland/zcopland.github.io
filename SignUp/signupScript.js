@@ -85,17 +85,7 @@ function handleClick2(sportRad) {
 	console.log(sport);
 }
 
-
-// var url = 'https://spreadsheets.google.com/feeds/list/1SNB4cCeOmEPDNRsLIopOX-FaCIyw5ebncwXU8DBymec/od6/public/values?alt=json-in-script&callback=?';
-// jQuery.getJSON(url).success(function(data) {
-//     console.log(data); 
-// }).error(function(message) {
-//     console.error('error' + message); 
-// }).complete(function() {
-//     console.log('completed!'); 
-// });
-
-
+var currentSeason;
 // START OF DATA GET CODE
 function mapEntries(json, realrowlength, skip){
   if (!skip) skip = 0;
@@ -123,8 +113,10 @@ function mapEntries(json, realrowlength, skip){
 
 //Do Something with Data Tree
 function doSomethingWithDataTree(root){
-
-	console.log(root);
+	currentSeason = root.children[0].name.toLowerCase();
+	if (currentSeason == "spring") {showSpring();}
+	if (currentSeason == "fall") {showFall();}
+	if (currentSeason == "winter") {showWinter();}
 }
 
 
@@ -145,16 +137,13 @@ function onGoogleSheetReady(data){
       var item = {};
       item.name = dataframe[i][0]; // we must use "value" instead of price since that is what the layout requires
       root.children.push(item);
-    }
-  console.log(root); 
+    } 
     
   //
   // Do something with the data tree
   //
   doSomethingWithDataTree(root);
 }
-
-
 
 function getScoreData(){
   if (container) {
@@ -170,8 +159,7 @@ function getScoreData(){
 }
 
 getScoreData();
-//searching through the spreadsheet to find the current season
-var currentSeason;
+//END OF DATA GET CODE
 
 
 //figuring out which season to display
