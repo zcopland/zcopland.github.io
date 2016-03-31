@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+function showNotification () {
   // At first, let's check if we have permission for notification
   // If not, let's ask for it
   if (window.Notification && Notification.permission !== "granted") {
@@ -70,7 +70,4 @@ window.addEventListener('load', function () {
     location.href="SignUp/signup.html";
   })
 
-});
-
-
-
+}
