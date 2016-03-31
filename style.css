@@ -1,6 +1,6 @@
 h1{
 	color: white;
-	font-size: 800%;
+	font-size: 20%;
 	text-align: center;
 	background-color: #800000;
 	border-radius: 20px;
@@ -28,7 +28,7 @@ button{
 	margin: auto;
 	margin-bottom: 20px;
 	color: #800000;
-	font-size: 500%;
+	font-size: 20%;
 	font-weight: 700;
 	margin-top: 8%;
 	border-width: 10px;
