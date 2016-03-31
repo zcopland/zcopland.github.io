@@ -249,20 +249,43 @@ editBtn.addEventListener("click", function() {
 	//checking to see if password is correct
 	if (password == pass1) {
 		//access granted
-		var indexResult;
-		var seasonChange = prompt("What season would you like to display?", "winter").toLowerCase();
-		for (var i = 0; i < seasonArray.length; i++) {
-			var result = seasonArray[i].toString().startsWith(seasonChange);
-			if (result) {
-				console.log("Found it!");
-				indexResult = i;
-			}
-		}
-		//sport is not found
-		if (indexResult == null) {
-			alert("Please make sure the season is spelled correctly!");
+		var seasonChange = prompt("What season would you like to display?", "winter");
+		console.log(seasonChange);
+		var baseurl2 = "https://script.google.com/macros/s/AKfycbz0h_pwDBUfi1L5S6e_EXpe6PjeSnmTIxFSL0qBAVRKXNvnID4/exec?";
+		var hi = document.createElement("iframe");
+		hi.style.display = "none";
+		document.body.appendChild(hi);
+		console.log(hi);
+
+		var iframeError;
+		if (seasonChange == "spring" || seasonChange == "winter" || seasonChange == "fall") {
+			submit2();
+		};
+		function submit2() {   
+		    console.log(seasonChange);
+		    url = baseurl2 + "" + seasonChange;
+		    console.log(url);
+		    hi.src = url;
+		    iframeError = setTimeout("error2()", 5000);  
 		}
 
+		function load2(e) {
+		    console.log('success');
+		    alert("Season has been changed.")
+		   
+		}
+
+		function error2() {
+		    console.log('error');
+		    alert("Error. Please try again later.")
+		}
+
+		hi.onload2 = function (e) {
+		        load2(e);
+		        clearTimeout(iframeError);
+		    };
+
+		    
 		
 		
 	} 
