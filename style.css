@@ -1,6 +1,6 @@
 h1{
 	color: white;
-	font-size: 300%;
+	font-size: 250%;
 	text-align: center;
 	background-color: #800000;
 	border-radius: 20px;
@@ -358,4 +358,7 @@ h5{
   background-color: #800000;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+#header{
+	text-decoration: underline;
 }

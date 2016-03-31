@@ -70,7 +70,10 @@
   signupBtn.addEventListener("click", function () {
     location.href="SignUp/signup.html";
   })
-
+  var infoBtn = document.getElementById("infoBtn");
+  infoBtn.addEventListener("click", function () {
+    location.href="info/info.html";
+  })
 // });
 
 
