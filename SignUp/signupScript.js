@@ -113,7 +113,8 @@ function mapEntries(json, realrowlength, skip){
 
 //Do Something with Data Tree
 function doSomethingWithDataTree(root){
-	currentSeason = root.children[0].name.toLowerCase();
+	currentSeason = root.children[1].name.toLowerCase();
+	console.log(currentSeason);
 	if (currentSeason == "spring") {showSpring();}
 	if (currentSeason == "fall") {showFall();}
 	if (currentSeason == "winter") {showWinter();}
@@ -263,7 +264,7 @@ editBtn.addEventListener("click", function() {
 		};
 		function submit2() {   
 		    console.log(seasonChange);
-		    url = baseurl2 + "" + seasonChange;
+		    url = baseurl2 + "Season=" + seasonChange;
 		    console.log(url);
 		    hi.src = url;
 		    iframeError = setTimeout("error2()", 5000);  
