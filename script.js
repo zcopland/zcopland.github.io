@@ -74,6 +74,10 @@
   infoBtn.addEventListener("click", function () {
     location.href="info/info.html";
   })
+  var linksBtn = document.getElementById("linksBtn");
+  linksBtn.addEventListener("click", function () {
+    location.href="usefulLinks/links.html";
+  })
 // });
 
 
