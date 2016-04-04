@@ -61,23 +61,7 @@
 //       alert("Hi!");
 //     }
 //   });
-  var calendarBtn = document.getElementById("calendarBtn");
-  console.log(calendarBtn);
-  calendarBtn.addEventListener("click", function () {
-    location.href="Calendar/calendar.html";
-  });
-  var signupBtn = document.getElementById("signupBtn");
-  signupBtn.addEventListener("click", function () {
-    location.href="SignUp/signup.html";
-  })
-  var infoBtn = document.getElementById("infoBtn");
-  infoBtn.addEventListener("click", function () {
-    location.href="info/info.html";
-  })
-  var linksBtn = document.getElementById("linksBtn");
-  linksBtn.addEventListener("click", function () {
-    location.href="usefulLinks/links.html";
-  })
+  
 // });
 
 
