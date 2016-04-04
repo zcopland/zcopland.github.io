@@ -1,1 +1,16 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
 
+<script type="text/javascript">
+var apikey = 0 ;
+	function OnLoadCallback(){
+		console.log(gapi);
+		gapi.client.setApiKey(apiKey);
+	}
+</script>
+<script src="https://apis.google.com/js/client.js?onload=OnLoadCallback"></script>
+</body>
+</html>
