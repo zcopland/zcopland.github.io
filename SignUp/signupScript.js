@@ -231,11 +231,6 @@ function signUp () {
 	    submit();
 }
 
-//BACK BUTTON
-var sBackBtn = document.getElementById("sBackBtn");
-  sBackBtn.addEventListener("click", function () {
-    location.href="../index.html";
-});
 
 var attempts = 0;
 var parent = document.getElementById("parent");
