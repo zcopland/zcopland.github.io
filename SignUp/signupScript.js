@@ -113,7 +113,8 @@ function mapEntries(json, realrowlength, skip){
 
 //Do Something with Data Tree
 function doSomethingWithDataTree(root){
-	currentSeason = root.children[1].name.toLowerCase();
+	var length = root.children.length;
+	currentSeason = root.children[length-1].name.toLowerCase();
 	console.log(currentSeason);
 	if (currentSeason == "spring") {showSpring();}
 	if (currentSeason == "fall") {showFall();}
@@ -234,7 +235,7 @@ function signUp () {
 
 var attempts = 0;
 var parent = document.getElementById("parent");
-var pass1 = "p1";
+var pass1 = "password1";
 var recoveryPass = "asdR3c0very";
 var springDIV = document.getElementById("springDIV");
 var winterDIV = document.getElementById("winterDIV");
@@ -262,18 +263,18 @@ editBtn.addEventListener("click", function() {
 		    url = baseurl2 + "Season=" + seasonChange;
 		    console.log(url);
 		    hi.src = url;
-		    iframeError = setTimeout("error2()", 5000);  
+		    iframeError = setTimeout("error()", 5000);
 		}
 
 		function load2(e) {
 		    console.log('success');
-		    alert("Season has been changed.")
+		    alert("Season has been changed.");
 		   
 		}
 
-		function error2() {
+		function error() {
 		    console.log('error');
-		    alert("Error. Please try again later.")
+		    alert("Error. Please try again later.");
 		}
 
 		hi.onload2 = function (e) {
