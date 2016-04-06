@@ -15,6 +15,8 @@ body{
 	height: 100%;
 	background: -webkit-linear-gradient(gray, white);
 	background-repeat: no-repeat;
+	margin: 0;
+
 }
 button{
 	-webkit-transition-duration: 0.4s;
@@ -390,4 +392,15 @@ h5{
   background-color: #800000;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+#dCode{
+	text-align: right;
+	color: #800000
+}
+
+#A{
+	
+	border: solid;
+	width: 7%;
 }
