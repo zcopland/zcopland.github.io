@@ -4,7 +4,6 @@ var CLIENT_ID = '197201236939-teujohaodun956d4pahf89gbhkmss2su.apps.googleuserco
 
 var SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
 
-var currentDay;
 /**
  * Check if current user has authorized this application.
  */
@@ -100,6 +99,4 @@ function appendPre(message) {
   var pre = document.getElementById('output');
   var textContent = document.createTextNode(message + '\n');
   pre.appendChild(textContent);
-  console.log(textContent);
 }
-//console.log(currentDay);
