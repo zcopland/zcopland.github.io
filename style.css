@@ -402,5 +402,9 @@ h5{
 #A{
 	
 	border: solid;
-	width: 7%;
+	font-size: 80%;
+	width: 6%;
+	margin: auto;
+	margin-top: 4%;
+	border-radius: 7px;
 }
