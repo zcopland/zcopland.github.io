@@ -6,7 +6,7 @@
 
 	<body id="indexPage">
 		
-		<h1>Edward Little <div id="A">A</div>
+		<h1>Edward Little <div id="scheduleDIV">A</div>
 		</h1>
 		
 		<!--button id="button">Notify Me</button-->
@@ -14,7 +14,19 @@
 		<button id="signupBtn" onclick="location.href='SignUp/signup.html'">Sign Up</button>
 		<button id="infoBtn" onclick="location.href='Info/info.html'">Information</button>
 		<button id="linksBtn" onclick="location.href='usefulLinks/links.html'"> Useful Links</button>
-		<script type="text/javascript" src= "script.js"></script>
+		<script src="https://apis.google.com/js/client.js?onload=OnLoadCallback"></script>
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth">
+    </script>
+  <body>
+    <div id="authorize-div" style="display: none">
+      <span>Authorize access to Google Calendar API</span>
+      <!--Button for the user to click to initiate auth sequence -->
+      <button id="authorize-button" onclick="handleAuthClick(event)">
+        Authorize
+      </button>
+    </div>
+    <pre id="output"></pre>
+    <script type="text/javascript" src="script.js"></script>
 	</body>
 
 </HTML>
