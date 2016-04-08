@@ -65,11 +65,11 @@
        */
       function listUpcomingEvents() {
         var request = gapi.client.calendar.events.list({
-          'calendarId': 'primary',
+          'calendarId': 'auburnschl.edu_n2mkfqv6kae2ovovra48abmk1o@group.calendar.google.com',
           'timeMin': (new Date()).toISOString(),
           'showDeleted': false,
           'singleEvents': true,
-          'maxResults': 10,
+          'maxResults': 365,
           'orderBy': 'startTime'
         });
 
