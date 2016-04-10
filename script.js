@@ -1,9 +1,9 @@
 // Your Client ID can be retrieved from your project in the Google
 // Developer Console, https://console.developers.google.com
 var CLIENT_ID = '197201236939-teujohaodun956d4pahf89gbhkmss2su.apps.googleusercontent.com';
-
 var SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
-
+var currentDay;
+var scheduleDIV = document.getElementById("scheduleDIV");
 /**
  * Check if current user has authorized this application.
  */
@@ -15,7 +15,6 @@ function checkAuth() {
       'immediate': true
     }, handleAuthResult);
 }
-
 /**
  * Handle response from authorization server.
  *
@@ -33,7 +32,6 @@ function handleAuthResult(authResult) {
     authorizeDiv.style.display = 'inline';
   }
 }
-
 /**
  * Initiate auth flow in response to user clicking authorize button.
  *
@@ -45,7 +43,6 @@ function handleAuthClick(event) {
     handleAuthResult);
   return false;
 }
-
 /**
  * Load Google Calendar client library. List upcoming events
  * once client library is loaded.
@@ -53,7 +50,6 @@ function handleAuthClick(event) {
 function loadCalendarApi() {
   gapi.client.load('calendar', 'v3', listUpcomingEvents);
 }
-
 /**
  * Print the summary and start datetime/date of the next ten events in
  * the authorized user's calendar. If no events are found an
@@ -68,11 +64,19 @@ function listUpcomingEvents() {
     'maxResults': 10,
     'orderBy': 'startTime'
   });
-
   request.execute(function(resp) {
     var events = resp.items;
     appendPre('Upcoming events:');
-
+    currentDay = events[0].summary;
+    //checking to see what the current A or B day schedule is
+    if (currentDay == "A Day") {
+      scheduleDIV.innerHTML = "A";
+      console.log("It is an A Day.");
+    }
+    if (currentDay == "B Day") {
+      scheduleDIV.innerHTML = "B";
+      console.log("It is a B Day.");
+    }
     if (events.length > 0) {
       for (i = 0; i < events.length; i++) {
         var event = events[i];
@@ -85,10 +89,8 @@ function listUpcomingEvents() {
     } else {
       appendPre('No upcoming events found.');
     }
-
   });
 }
-
 /**
  * Append a pre element to the body containing the given message
  * as its text node.
@@ -98,5 +100,6 @@ function listUpcomingEvents() {
 function appendPre(message) {
   var pre = document.getElementById('output');
   var textContent = document.createTextNode(message + '\n');
-  pre.appendChild(textContent);
+  //pre.appendChild(textContent);
+  console.log(textContent);
 }
