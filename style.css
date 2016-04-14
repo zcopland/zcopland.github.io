@@ -432,8 +432,9 @@ h5{
 	display: inline-block;
 	width: 15%; 
 	height: 5%;
-	font-size: 18;
+	font-size: 16;
 	font-weight: bold;
+	margin: 2%;
 	margin-left: 83%;
 }
 #authorize-button:hover{
