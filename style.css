@@ -435,7 +435,7 @@ h5{
 	font-size: 16;
 	font-weight: bold;
 	margin: 2%;
-	margin-left: auto;
+	margin: auto;
 }
 #authorize-button:hover{
 	background-color: #800000;
