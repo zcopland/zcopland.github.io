@@ -422,7 +422,7 @@ h5{
 		-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 	border-color: #800000;
-	background-color: #A0A0A0;
+	background-color: white;
 	display: inline-block;
 	border-radius: 7px;
 	border-width: 2px;
@@ -434,6 +434,7 @@ h5{
 	height: 5%;
 	font-size: 18;
 	font-weight: bold;
+	margin-left: 70%;
 }
 #authorize-button:hover{
 	background-color: #800000;
