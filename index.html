@@ -9,6 +9,8 @@
 		
 		<h1>Edward Little <div id="scheduleDIV"></div>
 		</h1>
+		 <!--Button for the user to click to initiate auth sequence -->
+	      <button id="authorize-button" onclick="handleAuthClick(event)">
 		<!--button id="button">Notify Me</button-->
 		<button id="calendarBtn" onclick="location.href='Calendar/calendar.html'">Calendar</button>
 		<button id="signupBtn" onclick="location.href='SignUp/signup.html'">Sign Up</button>
@@ -20,8 +22,7 @@
 		<script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
 	    <div id="authorize-div" style="display: none">
 	      
-	      <!--Button for the user to click to initiate auth sequence -->
-	      <button id="authorize-button" onclick="handleAuthClick(event)">
+	     
 	        Authorize
 	      </button>
 	    </div>
