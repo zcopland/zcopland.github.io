@@ -1,0 +1,76 @@
+Football:
+VCalendar ID: auburnschl.edu_joge1keon3lhb6i63acneaj6vo@group.calendar.google.com
+JVCalendar ID: auburnschl.edu_bjlm2mlk19okbaqqt0p0hq24h0@group.calendar.google.com
+VCalendar ID: auburnschl.edu_7f0hbnagsruhg2pdunn7a9clj0@group.calendar.google.com
+
+Cross Country:
+Calendar ID: auburnschl.edu_3hhmjv1j8r67n5jggjohsqest0@group.calendar.google.com
+
+BoysSoccer:
+Calendar ID: auburnschl.edu_q1t7nf2nspm3htvlo7n6ss5au0@group.calendar.google.com
+
+GirlsSoccer: 
+Calendar ID: auburnschl.edu_b3jrh5777pdbr3403p1os8ft70@group.calendar.google.com
+
+Field Hockey:
+Calendar ID: auburnschl.edu_potd7oiqp52o805hd1sft852p4@group.calendar.google.com
+
+Golf:
+Calendar ID: auburnschl.edu_t79aj5enltkj4jkc8tn37cktp0@group.calendar.google.com
+
+Nordic Ski:
+Calendar ID: auburnschl.edu_l17h04i5djjercjlgjt7436qh4@group.calendar.google.com
+
+BoysBasketball:
+Calendar ID: auburnschl.edu_4s09hpoufp9po7gabqn0tlm694@group.calendar.google.com
+
+GirlsBasketball:
+Calendar ID: auburnschl.edu_tv6ueum8f6u509s1jhos3fktvo@group.calendar.google.com
+
+Indoor Track:
+Calendar ID: auburnschl.edu_evorn83fb1j2dd6qu82pug9cmc@group.calendar.google.com
+
+Cheering:
+Calendar ID: auburnschl.edu_rlsu6h15lfckte4s5ee8ktemt8@group.calendar.google.com
+
+Alpine Ski:
+Calendar ID: auburnschl.edu_550ovukqfajgjsllia3fnf773g@group.calendar.google.com
+
+GirlsHockey:
+Calendar ID: auburnschl.edu_porbieavksf6u3knra252rf3bk@group.calendar.google.com
+
+BoysHockey:
+Calendar ID: auburnschl.edu_efcbsetp66ca3gherjptqvb79s@group.calendar.google.com
+
+BoysLacrosse:
+Calendar ID: auburnschl.edu_4pm5kl57q4f5vtpfrl6avqarv0@group.calendar.google.com
+
+GirlsLacrosse:
+Calendar ID: auburnschl.edu_i8n9d4eu10op2j53ctohb3nhdk@group.calendar.google.com
+
+Swimming:
+Calendar ID: auburnschl.edu_k8qlefqm6m170b59hrgu24nr9k@group.calendar.google.com
+
+Outdoor Track:
+Calendar ID: auburnschl.edu_smg9dupm20daro135atuki6u5s@group.calendar.google.com
+
+Varsity Baseball/softball:
+Calendar ID:auburnschl.edu_364lho1jat7uqgtp6afsvgloqs@group.calendar.google.com
+
+FreshmanBaseball:
+Calendar ID: auburnschl.edu_c4jk20ug84qgj2banib83c7164@group.calendar.google.com
+
+JVBaseball/Softball:
+Calendar ID: auburnschl.edu_9jg5nght765p6fmhj00f1e4dv0@group.calendar.google.com
+
+BoysTennis:
+Calendar ID: auburnschl.edu_j9qjnopu2nstpgkm6d57v2s7j0@group.calendar.google.com
+
+GirlsTennis:
+Calendar ID: auburnschl.edu_vovvbg4bks5ubbkcf31g6g3l1o@group.calendar.google.com
+
+Student Activities:
+Calendar ID: auburnschl.edu_pn6id1hi8b5abe676g0khh2dl4@group.calendar.google.com
+
+General: 
+Calendar ID: elhscal@auburnschl.edu
