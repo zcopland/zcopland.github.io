@@ -1,6 +1,6 @@
 function varsityFootball () {
 	console.log("Football clicked.");
-
+	
 }
 
 function crossCountry () {
@@ -73,3 +73,14 @@ function studentActivities () {
 
 }
 
+function tennis () {
+	console.log("Tennis clicked.");
+}
+
+function lacrosse () {
+	console.log("Lacrosse clicked.");
+}
+
+function general () {
+	console.log("General clicked.");
+}

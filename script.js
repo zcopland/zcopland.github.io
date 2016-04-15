@@ -1,9 +1,14 @@
+
 // Your Client ID can be retrieved from your project in the Google
 // Developer Console, https://console.developers.google.com
 var CLIENT_ID = '197201236939-teujohaodun956d4pahf89gbhkmss2su.apps.googleusercontent.com';
 var SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
 var currentDay;
 var scheduleDIV = document.getElementById("scheduleDIV");
+//making it clickable
+scheduleDIV.addEventListener("click", function() {
+  alert("This displays the A/B day schedule.");
+})
 /**
  * Check if current user has authorized this application.
  */
