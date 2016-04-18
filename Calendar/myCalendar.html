@@ -1,48 +1,56 @@
 <html>
-<head>
-	<title>Calendar</title>
-	<link rel="stylesheet" type="text/css" href="../style.css">
-</head>
-<body>
-<table id="table">
-  <tr id="row">
-    <td id="day0">Monday</td>
-  </tr>
-</table>
-<table id="table">
-  <tr id="row">
-    <td id="day1">Tuesday</td>
-  </tr>
-</table>
-<table id="table">
-  <tr id="row">
-    <td id="day2">Wednesday</td>
-  </tr>
-</table>
-<table id="table">
-  <tr id="row">
-    <td id="day3">Thursday</td>
-  </tr>
-</table>
-<table id="table">
-  <tr id="row">
-    <td id="day4">Friday</td>
-  </tr>
-</table>
-<table id="table">
-  <tr id="row">
-    <td id="day5">Saturday</td>
-  </tr>
-</table>
-<table id="table">
-  <tr id="row">
-    <td id="day6">Sunday</td>
-  </tr>
-</table>
-<input type="button" name="MCbackBtn" value="Back" id="MCbackBtn" onclick="location.href='calendar.html'" />
-
-<script type="text/javascript" src= "myCalendar.js">
-</script>
-
-</body>
+    <head>
+    	<title>My Calendar</title>
+    	<link rel="stylesheet" type="text/css" href="../style.css">
+      <script src="https://apis.google.com/js/client.js?onload=OnLoadCallback"></script>
+    </head>
+    <body>
+      <div>
+        <table id="table">
+          <tr id="row">
+            <td id="day0">Monday</td>
+          </tr>
+        </table>
+        <table id="table">
+          <tr id="row">
+            <td id="day1">Tuesday</td>
+          </tr>
+        </table>
+        <table id="table">
+          <tr id="row">
+            <td id="day2">Wednesday</td>
+          </tr>
+        </table>
+        <table id="table">
+          <tr id="row">
+            <td id="day3">Thursday</td>
+          </tr>
+        </table>
+        <table id="table">
+          <tr id="row">
+            <td id="day4">Friday</td>
+          </tr>
+        </table>
+        <table id="table">
+          <tr id="row">
+            <td id="day5">Saturday</td>
+          </tr>
+        </table>
+        <table id="table">
+          <tr id="row">
+            <td id="day6">Sunday</td>
+          </tr>
+        </table>
+      </div>
+      <div id="authorize-div" style="display: none">
+        
+        <!--Button for the user to click to initiate auth sequence -->
+        <button id="authorize-button" onclick="handleAuthClick(event)">
+          Sign In
+        </button>
+      </div>
+      <input type="button" name="MCbackBtn" value="Back" id="MCbackBtn" onclick="location.href='calendar.html'" />
+      <script type="text/javascript" src= "myCalendar.js"></script>
+      <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+    </body>
 </html>
