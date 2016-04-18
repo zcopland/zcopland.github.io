@@ -6,86 +6,146 @@ var day3 = document.getElementById("day3");
 var day4 = document.getElementById("day4");
 var day5 = document.getElementById("day5");
 var day6 = document.getElementById("day6");
+var dayArray = [day0, day1, day2, day3, day4, day5, day6];
 
 //finding out the current day and date
 //then changing the innerHTML of the tables to descend the days
-var day;
-switch (new Date().getDay()) {
-    case 0:
-        day = "Sunday";
-        console.log(day);
-        day0.innerHTML = "Sunday";
-        day1.innerHTML = "Monday";
-        day2.innerHTML = "Tuesday";
-        day3.innerHTML = "Wednesday";
-        day4.innerHTML = "Thursday";
-        day5.innerHTML = "Friday";
-        day6.innerHTML = "Saturday";
-        break;
-    case 1:
-        day = "Monday";
-        console.log(day);
-        day6.innerHTML = "Sunday";
-        day0.innerHTML = "Monday";
-        day1.innerHTML = "Tuesday";
-        day2.innerHTML = "Wednesday";
-        day3.innerHTML = "Thursday";
-        day4.innerHTML = "Friday";
-        day5.innerHTML = "Saturday";
-        break;
-    case 2:
-        day = "Tuesday";
-        console.log(day);
-        day5.innerHTML = "Sunday";
-        day6.innerHTML = "Monday";
-        day0.innerHTML = "Tuesday";
-        day1.innerHTML = "Wednesday";
-        day2.innerHTML = "Thursday";
-        day3.innerHTML = "Friday";
-        day4.innerHTML = "Saturday";
-        break;
-    case 3:
-        day = "Wednesday";
-        console.log(day);
-        day4.innerHTML = "Sunday";
-        day5.innerHTML = "Monday";
-        day6.innerHTML = "Tuesday";
-        day0.innerHTML = "Wednesday";
-        day1.innerHTML = "Thursday";
-        day2.innerHTML = "Friday";
-        day3.innerHTML = "Saturday";
-        break;
-    case 4:
-        day = "Thursday";
-        console.log(day);
-        day3.innerHTML = "Sunday";
-        day4.innerHTML = "Monday";
-        day5.innerHTML = "Tuesday";
-        day6.innerHTML = "Wednesday";
-        day0.innerHTML = "Thursday";
-        day1.innerHTML = "Friday";
-        day2.innerHTML = "Saturday";
-        break;
-    case 5:
-        day = "Friday";
-        console.log(day);
-        day2.innerHTML = "Sunday";
-        day3.innerHTML = "Monday";
-        day4.innerHTML = "Tuesday";
-        day5.innerHTML = "Wednesday";
-        day6.innerHTML = "Thursday";
-        day0.innerHTML = "Friday";
-        day1.innerHTML = "Saturday";
-        break;
-    case 6:
-        day = "Saturday";
-        console.log(day);
-        day1.innerHTML = "Sunday";
-        day2.innerHTML = "Monday";
-        day3.innerHTML = "Tuesday";
-        day4.innerHTML = "Wednesday";
-        day5.innerHTML = "Thursday";
-        day6.innerHTML = "Friday";
-        day0.innerHTML = "Saturday";
-        break;
+for (var i = 0; i < dayArray.length; i++) {
+	var currentDate = new Date(new Date().getTime() + (i * 24) * 60 * 60 * 1000);
+	var dayNumber = currentDate.getDate();
+	var month = currentDate.getMonth() + 1;
+	var year = currentDate.getFullYear();
+	switch(currentDate.getDay()) {
+		case 0:
+	        day = "Sunday";
+	        break;
+	    case 1:
+	        day = "Monday";
+	        break;
+	    case 2:
+	        day = "Tuesday";
+	        break;
+	    case 3:
+	        day = "Wednesday";
+	        break;
+	    case 4:
+	        day = "Thursday";
+	        break;
+	    case 5:
+	        day = "Friday";
+	        break;
+	    case 6:
+	        day = "Saturday";
+	        break;
+	}
+	dayArray[i].innerHTML =  "<b>" + day + " (" + month + "/" + dayNumber + "/" + year + ")" + "</b>";
 }
+
+function runCal() {
+	// Your Client ID can be retrieved from your project in the Google
+	// Developer Console, https://console.developers.google.com
+	var CLIENT_ID = '197201236939-teujohaodun956d4pahf89gbhkmss2su.apps.googleusercontent.com';
+	var SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
+	var currentDay;
+	/**
+	 * Check if current user has authorized this application.
+	 */
+	function checkAuth() {
+	  gapi.auth.authorize(
+	    {
+	      'client_id': CLIENT_ID,
+	      'scope': SCOPES.join(' '),
+	      'immediate': true
+	    }, handleAuthResult);
+	}
+	/**
+	 * Handle response from authorization server.
+	 *
+	 * @param {Object} authResult Authorization result.
+	 */
+	function handleAuthResult(authResult) {
+	  var authorizeDiv = document.getElementById('authorize-div');
+	  if (authResult && !authResult.error) {
+	    // Hide auth UI, then load client library.
+	    authorizeDiv.style.display = 'none';
+	    loadCalendarApi();
+	  } else {
+	    // Show auth UI, allowing the user to initiate authorization by
+	    // clicking authorize button.
+	    authorizeDiv.style.display = 'inline';
+	  }
+	}
+	/**
+	 * Initiate auth flow in response to user clicking authorize button.
+	 *
+	 * @param {Event} event Button click event.
+	 */
+	function handleAuthClick(event) {
+	  gapi.auth.authorize(
+	    {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
+	    handleAuthResult);
+	  return false;
+	}
+	/**
+	 * Load Google Calendar client library. List upcoming events
+	 * once client library is loaded.
+	 */
+	function loadCalendarApi() {
+	  gapi.client.load('calendar', 'v3', listUpcomingEvents);
+	}
+	/**
+	 * Print the summary and start datetime/date of the next ten events in
+	 * the authorized user's calendar. If no events are found an
+	 * appropriate message is printed.
+	 */
+	function listUpcomingEvents() {
+	  var request = gapi.client.calendar.events.list({
+	    'calendarId': 'auburnschl.edu_n2mkfqv6kae2ovovra48abmk1o@group.calendar.google.com',
+	    'timeMin': (new Date()).toISOString(),
+	    'showDeleted': false,
+	    'singleEvents': true,
+	    'maxResults': 10,
+	    'orderBy': 'startTime'
+	  });
+	  request.execute(function(resp) {
+	    var events = resp.items;
+	    appendPre('Upcoming events:');
+	    currentDay = events[0].summary;
+	    //checking to see what the current A or B day schedule is
+	    if (currentDay == "A Day") {
+	      scheduleDIV.innerHTML = "A";
+	      console.log("It is an A Day.");
+	    }
+	    if (currentDay == "B Day") {
+	      scheduleDIV.innerHTML = "B";
+	      console.log("It is a B Day.");
+	    }
+	    if (events.length > 0) {
+	      for (i = 0; i < events.length; i++) {
+	        var event = events[i];
+	        var when = event.start.dateTime;
+	        if (!when) {
+	          when = event.start.date;
+	        }
+	        appendPre(event.summary + ' (' + when + ')')
+	      }
+	    } else {
+	      appendPre('No upcoming events found.');
+	    }
+	  });
+	}
+	/**
+	 * Append a pre element to the body containing the given message
+	 * as its text node.
+	 *
+	 * @param {string} message Text to be placed in pre element.
+	 */
+	function appendPre(message) {
+	  var pre = document.getElementById('output');
+	  var textContent = document.createTextNode(message + '\n');
+	  //pre.appendChild(textContent);
+	  console.log(textContent);
+	}
+}
+
+runCal();
