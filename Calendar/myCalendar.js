@@ -147,5 +147,3 @@ function runCal() {
 	  console.log(textContent);
 	}
 }
-
-runCal();
