@@ -2,7 +2,6 @@
     <head>
     	<title>My Calendar</title>
     	<link rel="stylesheet" type="text/css" href="../style.css">
-      <script src="https://apis.google.com/js/client.js?onload=OnLoadCallback"></script>
     </head>
     <body>
       <div>
@@ -42,16 +41,7 @@
           </tr>
         </table>
       </div>
-      <div id="authorize-div" style="display: none">
-        
-        <!--Button for the user to click to initiate auth sequence -->
-        <button id="authorize-button" onclick="handleAuthClick(event)">
-          Sign In
-        </button>
-      </div>
       <input type="button" name="MCbackBtn" value="Back" id="MCbackBtn" onclick="location.href='calendar.html'" />
       <script type="text/javascript" src= "myCalendar.js"></script>
-      <script type="text/javascript" src= "../script.js"></script>
-      <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
     </body>
 </html>
