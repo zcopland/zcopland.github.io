@@ -144,7 +144,7 @@ h5{
 
 #sBackBtn{
 	
-		-webkit-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 	border-color: #800000;
 	background-color: white;
@@ -201,8 +201,8 @@ h5{
 #hiddenIframe{
 	height: 0px;
 }
-#backBtn{
-		-webkit-transition-duration: 0.4s;
+#backBtn, #calBtn{
+	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 	border-color: #800000;
 	background-color: white;
