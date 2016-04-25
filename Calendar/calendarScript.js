@@ -91,28 +91,34 @@ function crossCountry () {
 
 function soccer () {
 	console.log("Soccer clicked.");
+	var url = "auburnschl.edu_q1t7nf2nspm3htvlo7n6ss5au0@group.calendar.google.com&auburnschl.edu_b3jrh5777pdbr3403p1os8ft70@group.calendar.google.com";
 	if(!soccerClicked) {
 		soccerBtn.style.background= "#800000";
 		soccerBtn.style.color = "white";
 		soccerClicked = true;
+		iframe.src = iframeURL1 + url;
 	} else {
 		soccerBtn.style.background= "white";
 		soccerBtn.style.color = "#800000";
 		soccerClicked = false;
+		iframe.src = iframeURL1;
 	}
 
 }
 
 function fieldHockey () {
 	console.log("Field Hockey clicked.");
+	var url = "auburnschl.edu_potd7oiqp52o805hd1sft852p4@group.calendar.google.com";
 	if(!fieldHockeyClicked) {
 		fieldHockeyBtn.style.background= "#800000";
 		fieldHockeyBtn.style.color = "white";
 		fieldHockeyClicked = true;
+		iframe.src = iframeURL1 + url;
 	} else {
 		fieldHockeyBtn.style.background= "white";
 		fieldHockeyBtn.style.color = "#800000";
 		fieldHockeyClicked = false;
+		iframeURL1.src = iframeURL1;
 	}
 
 }
