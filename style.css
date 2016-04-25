@@ -231,14 +231,16 @@ h5{
 	transition-duration: 0.4s;
  	display: inline-block;
  	margin: auto;
- 	margin-top: 1%;
- 	height: 125%;
+ 	margin-top: 10%;
+ 	margin-right: 0%;
+ 	height: 120%;
  	width: 80%;
+ 	padding: 0px;
  	border-color: #800000;
  	border-radius: 8px;
  	color: #800000;
  	background-color: white;
- 	font-size: 150%;
+ 	font-size: 130%;
  	font-weight: bold;
  	border-width: 4px;
  }
@@ -265,17 +267,10 @@ h5{
     border: 0;
     padding: 0%;
     display: table;
-    width: 100%;
+    width: 105%;
     height: 10%;
     margin-bottom: 5%;
     content: 0%;
-}
-#left-cell {
-    display: table-cell;
-    vertical-align: middle;
-    width: 12%;
-    text-align:center;
-    padding-top: 2%;
 
 
 }
@@ -286,6 +281,7 @@ h5{
     height: 100%;
     width: 20%;
     padding: 0%;
+    margin-top:2%;
 
    }
    #editBtn{
