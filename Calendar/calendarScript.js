@@ -41,6 +41,10 @@ var lacrosseClicked = false;
 var tennisClicked = false;
 var generalClicked = false;
 
+var iframe = document.getElementById("calIframe");
+var iframeURL1 = "https://calendar.google.com/calendar/embed?showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&height=600&wkst=1&bgcolor=%23FFFFFF&ctz=America%2FNew_York&src=auburnschl.edu_n2mkfqv6kae2ovovra48abmk1o%40group.calendar.google.com&color=%23125A12&src=elhscal%40auburnschl.edu&color=%231B887A&src=auburnschl.edu_joge1keon3lhb6i63acneaj6vo%40group.calendar.google.com&";
+var iframeURL2 = "ctz=America%2FNew_York";
+
 function myCalClicked () {
 	calDiv.style.display = "none";
 	mycalDiv.style.display = "inline";
@@ -53,28 +57,34 @@ function calClicked () {
 
 function varsityFootball () {
 	console.log("Football clicked.");
+	var url = "src=auburnschl.edu_joge1keon3lhb6i63acneaj6vo%40group.calendar.google.com&auburnschl.edu_bjlm2mlk19okbaqqt0p0hq24h0@group.calendar.google.com&auburnschl.edu_7f0hbnagsruhg2pdunn7a9clj0@group.calendar.google.com";
 	if(!footballClicked) {
 		footballBtn.style.background= "#800000";
 		footballBtn.style.color = "white";
 		footballClicked = true;
+		iframe.src = iframeURL1 + url;
 	} else {
 		footballBtn.style.background= "white";
 		footballBtn.style.color = "#800000";
 		footballClicked = false;
+		iframe.src = iframeURL1;
 	}
 	
 }
 
 function crossCountry () {
 	console.log("Cross Country clicked.");
+	var url = "auburnschl.edu_3hhmjv1j8r67n5jggjohsqest0@group.calendar.google.com";
 	if(!crossCountryClicked) {
 		crossCountryBtn.style.background= "#800000";
 		crossCountryBtn.style.color = "white";
 		crossCountryClicked = true;
+		iframe.src = iframeURL1 + url;
 	} else {
 		crossCountryBtn.style.background= "white";
 		crossCountryBtn.style.color = "#800000";
 		crossCountryClicked = false;
+		iframe.src = iframeURL1;
 	}
 
 }
@@ -221,24 +231,31 @@ function swimming () {
 
 function outdoorTrack () {
 	console.log("Outdoor Track clicked.");
+	var url = "src=auburnschl.edu_smg9dupm20daro135atuki6u5s%40group.calendar.google.com&amp;color=%2342104A&amp;";
 	if(!outdoorTrackClicked) {
 		outdoorTrackBtn.style.background= "#800000";
 		outdoorTrackBtn.style.color = "white";
 		outdoorTrackClicked = true;
+		iframe.src = iframeURL1 + url;
 	} else {
 		outdoorTrackBtn.style.background= "white";
 		outdoorTrackBtn.style.color = "#800000";
 		outdoorTrackClicked = false;
+		iframe.src = iframeURL1;
 	}
 
 }
 
 function baseball () {
 	console.log("Baseball clicked.");
+	var url = "src=auburnschl.edu_1lp7v1u6e741gnokail75pqbqo%40group.calendar.google.com&amp;color=%238C500B&amp;";
 	if(!baseballClicked) {
 		baseballBtn.style.background= "#800000";
 		baseballBtn.style.color = "white";
 		baseballClicked = true;
+
+		iframe.src += url;
+		console.log(iframe.src);
 	} else {
 		baseballBtn.style.background= "white";
 		baseballBtn.style.color = "#800000";
