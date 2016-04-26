@@ -43,7 +43,6 @@ var generalClicked = false;
 
 var iframe = document.getElementById("calIframe");
 var iframeURL1 = "https://calendar.google.com/calendar/embed?showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&height=600&wkst=1&bgcolor=%23FFFFFF&ctz=America%2FNew_York&src=auburnschl.edu_n2mkfqv6kae2ovovra48abmk1o%40group.calendar.google.com&";
-var iframeURL2 = "ctz=America%2FNew_York";
 iframe.src = iframeURL1;
 var iframeLength = iframeURL1.length;
 
@@ -266,12 +265,14 @@ function outdoorTrack () {
 		outdoorTrackBtn.style.background= "#800000";
 		outdoorTrackBtn.style.color = "white";
 		outdoorTrackClicked = true;
-		iframeLength = iframe.src.length;
-		iframe.src += url;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		outdoorTrackBtn.style.background= "white";
 		outdoorTrackBtn.style.color = "#800000";
 		outdoorTrackClicked = false;
+		iframeURL1.replace(url, "");
+		console.log(iframeURL1.search(url));
 		iframe.src = iframeURL1;
 	}
 
@@ -284,11 +285,13 @@ function baseball () {
 		baseballBtn.style.background= "#800000";
 		baseballBtn.style.color = "white";
 		baseballClicked = true;
-		iframe.src += url;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		baseballBtn.style.background= "white";
 		baseballBtn.style.color = "#800000";
 		baseballClicked = false;
+		iframeURL1.replace(url, "");
 		iframe.src = iframeURL1;
 	}
 
