@@ -63,12 +63,14 @@ function varsityFootball () {
 		footballBtn.style.background= "#800000";
 		footballBtn.style.color = "white";
 		footballClicked = true;
-		iframe.src += url;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		footballBtn.style.background= "white";
 		footballBtn.style.color = "#800000";
 		footballClicked = false;
-		iframe.src = iframe.src.substring(0,404);
+		iframeURL1 = iframeURL1.replace(url, "");
+		iframe.src = iframeURL1;
 	}
 	
 }
@@ -80,11 +82,13 @@ function crossCountry () {
 		crossCountryBtn.style.background= "#800000";
 		crossCountryBtn.style.color = "white";
 		crossCountryClicked = true;
-		iframe.src = iframeURL1 + url;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		crossCountryBtn.style.background= "white";
 		crossCountryBtn.style.color = "#800000";
 		crossCountryClicked = false;
+		iframeURL1 = iframeURL1.replace(url, "");
 		iframe.src = iframeURL1;
 	}
 
@@ -97,11 +101,13 @@ function soccer () {
 		soccerBtn.style.background= "#800000";
 		soccerBtn.style.color = "white";
 		soccerClicked = true;
-		iframe.src = iframeURL1 + url;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		soccerBtn.style.background= "white";
 		soccerBtn.style.color = "#800000";
 		soccerClicked = false;
+		iframeURL1 = iframeURL1.replace(url, "");
 		iframe.src = iframeURL1;
 	}
 
@@ -114,12 +120,14 @@ function fieldHockey () {
 		fieldHockeyBtn.style.background= "#800000";
 		fieldHockeyBtn.style.color = "white";
 		fieldHockeyClicked = true;
-		iframe.src = iframeURL1 + url;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		fieldHockeyBtn.style.background= "white";
 		fieldHockeyBtn.style.color = "#800000";
 		fieldHockeyClicked = false;
-		iframeURL1.src = iframeURL1;
+		iframeURL1 = iframeURL1.replace(url, "");
+		iframe.src = iframeURL1;
 	}
 
 }
@@ -131,10 +139,14 @@ function golf () {
 		golfBtn.style.background= "#800000";
 		golfBtn.style.color = "white";
 		golfClicked = true;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		golfBtn.style.background= "white";
 		golfBtn.style.color = "#800000";
 		golfClicked = false;
+		iframeURL1 = iframeURL1.replace(url, "");
+		iframe.src = iframeURL1;
 	}
 
 }
@@ -146,11 +158,13 @@ function nordicSki () {
 		nordicSkiBtn.style.background= "#800000";
 		nordicSkiBtn.style.color = "white";
 		nordicSkiClicked = true;
-		iframe.src += url;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		nordicSkiBtn.style.background= "white";
 		nordicSkiBtn.style.color = "#800000";
 		nordicSkiClicked = false;
+		iframeURL1 = iframeURL1.replace(url, "");
 		iframe.src = iframeURL1;
 	}
 
@@ -163,11 +177,13 @@ function basketball () {
 		basketballBtn.style.background= "#800000";
 		basketballBtn.style.color = "white";
 		basketballClicked = true;
-		iframe.src += url;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		basketballBtn.style.background= "white";
 		basketballBtn.style.color = "#800000";
 		basketballClicked = false;
+		iframeURL1 = iframeURL1.replace(url, "");
 		iframe.src = iframeURL1;
 	}
 
@@ -180,11 +196,13 @@ function indoorTrack () {
 		indoorTrackBtn.style.background= "#800000";
 		indoorTrackBtn.style.color = "white";
 		indoorTrackClicked = true;
-		iframe.src += url;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		indoorTrackBtn.style.background= "white";
 		indoorTrackBtn.style.color = "#800000";
 		indoorTrackClicked = false;
+		iframeURL1 = iframeURL1.replace(url, "");
 		iframe.src = iframeURL1;
 	}
 
@@ -197,11 +215,13 @@ function cheering () {
 		cheeringBtn.style.background= "#800000";
 		cheeringBtn.style.color = "white";
 		cheeringClicked = true;
-		iframe.src += url;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		cheeringBtn.style.background= "white";
 		cheeringBtn.style.color = "#800000";
 		cheeringClicked = false;
+		iframeURL1 = iframeURL1.replace(url, "");
 		iframe.src = iframeURL1;
 	}
 
@@ -214,11 +234,13 @@ function alpineSki () {
 		alpineSkiBtn.style.background= "#800000";
 		alpineSkiBtn.style.color = "white";
 		alpineSkiClicked = true;
-		iframe.src += url;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		alpineSkiBtn.style.background= "white";
 		alpineSkiBtn.style.color = "#800000";
 		alpineSkiClicked = false;
+		iframeURL1 = iframeURL1.replace(url, "");
 		iframe.src = iframeURL1;
 	}
 
@@ -231,11 +253,13 @@ function hockey () {
 		hockeyBtn.style.background= "#800000";
 		hockeyBtn.style.color = "white";
 		hockeyClicked = true;
-		iframe.src += url;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		hockeyBtn.style.background= "white";
 		hockeyBtn.style.color = "#800000";
 		hockeyClicked = false;
+		iframeURL1 = iframeURL1.replace(url, "");
 		iframe.src = iframeURL1;
 	}
 
@@ -248,11 +272,13 @@ function swimming () {
 		swimmingBtn.style.background= "#800000";
 		swimmingBtn.style.color = "white";
 		swimmingClicked = true;
-		iframe.src += url;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		swimmingBtn.style.background= "white";
 		swimmingBtn.style.color = "#800000";
 		swimmingClicked = false;
+		iframeURL1 = iframeURL1.replace(url, "");
 		iframe.src = iframeURL1;
 	}
 
@@ -271,8 +297,7 @@ function outdoorTrack () {
 		outdoorTrackBtn.style.background= "white";
 		outdoorTrackBtn.style.color = "#800000";
 		outdoorTrackClicked = false;
-		iframeURL1.replace(url, "");
-		console.log(iframeURL1.search(url));
+		iframeURL1 = iframeURL1.replace(url, "");
 		iframe.src = iframeURL1;
 	}
 
@@ -291,7 +316,7 @@ function baseball () {
 		baseballBtn.style.background= "white";
 		baseballBtn.style.color = "#800000";
 		baseballClicked = false;
-		iframeURL1.replace(url, "");
+		iframeURL1 = iframeURL1.replace(url, "");
 		iframe.src = iframeURL1;
 	}
 
@@ -304,11 +329,13 @@ function studentActivities () {
 		studentActivitiesBtn.style.background= "#800000";
 		studentActivitiesBtn.style.color = "white";
 		studentActivitiesClicked = true;
-		iframe.src += url;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		studentActivitiesBtn.style.background= "white";
 		studentActivitiesBtn.style.color = "#800000";
 		studentActivitiesClicked = false;
+		iframeURL1 = iframeURL1.replace(url, "");
 		iframe.src = iframeURL1;
 	}
 
@@ -321,11 +348,13 @@ function tennis () {
 		tennisBtn.style.background= "#800000";
 		tennisBtn.style.color = "white";
 		tennisClicked = true;
-		iframe.src += url;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		tennisBtn.style.background= "white";
 		tennisBtn.style.color = "#800000";
 		tennisClicked = false;
+		iframeURL1 = iframeURL1.replace(url, "");
 		iframe.src = iframeURL1;
 	}
 }
@@ -337,11 +366,13 @@ function lacrosse () {
 		lacrossBtn.style.background= "#800000";
 		lacrossBtn.style.color = "white";
 		lacrosseClicked = true;
-		iframe.src += url;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		lacrossBtn.style.background= "white";
 		lacrossBtn.style.color = "#800000";
 		lacrosseClicked = false;
+		iframeURL1 = iframeURL1.replace(url, "");
 		iframe.src = iframeURL1;
 	}
 }
@@ -353,16 +384,18 @@ function general () {
 		generalBtn.style.background= "#800000";
 		generalBtn.style.color = "white";
 		generalClicked = true;
-		iframe.src += url;
+		iframeURL1 += url;
+		iframe.src = iframeURL1;
 	} else {
 		generalBtn.style.background= "white";
 		generalBtn.style.color = "#800000";
 		generalClicked = false;
+		iframeURL1 = iframeURL1.replace(url, "");
 		iframe.src = iframeURL1;
 	}
-	var helpDiv = document.getElementById("help");
-
-	helpDiv.addEventListener("click", function() {
-  alert("test");
-})
 }
+
+var helpDiv = document.getElementById("help");
+helpDiv.addEventListener("click", function() {
+  alert("test");
+});
