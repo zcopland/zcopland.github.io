@@ -360,4 +360,9 @@ function general () {
 		generalClicked = false;
 		iframe.src = iframeURL1;
 	}
+	var helpDiv = document.getElementById("help");
+
+	helpDiv.addEventListener("click", function() {
+  alert("test");
+})
 }
