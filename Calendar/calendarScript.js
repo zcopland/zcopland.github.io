@@ -57,7 +57,7 @@ function calClicked () {
 }
 
 function varsityFootball () {
-	console.log("Football clicked.");
+	//console.log("Football clicked.");
 	var url = "src=auburnschl.edu_joge1keon3lhb6i63acneaj6vo%40group.calendar.google.com&src=auburnschl.edu_bjlm2mlk19okbaqqt0p0hq24h0@group.calendar.google.com&src=auburnschl.edu_7f0hbnagsruhg2pdunn7a9clj0@group.calendar.google.com&";
 	if(!footballClicked) {
 		footballBtn.style.background= "#800000";
@@ -76,7 +76,7 @@ function varsityFootball () {
 }
 
 function crossCountry () {
-	console.log("Cross Country clicked.");
+	//console.log("Cross Country clicked.");
 	var url = "src=auburnschl.edu_3hhmjv1j8r67n5jggjohsqest0@group.calendar.google.com&";
 	if(!crossCountryClicked) {
 		crossCountryBtn.style.background= "#800000";
@@ -95,7 +95,7 @@ function crossCountry () {
 }
 
 function soccer () {
-	console.log("Soccer clicked.");
+	//console.log("Soccer clicked.");
 	var url = "src=auburnschl.edu_q1t7nf2nspm3htvlo7n6ss5au0@group.calendar.google.com&src=auburnschl.edu_b3jrh5777pdbr3403p1os8ft70@group.calendar.google.com&";
 	if(!soccerClicked) {
 		soccerBtn.style.background= "#800000";
@@ -114,7 +114,7 @@ function soccer () {
 }
 
 function fieldHockey () {
-	console.log("Field Hockey clicked.");
+	//console.log("Field Hockey clicked.");
 	var url = "src=auburnschl.edu_potd7oiqp52o805hd1sft852p4@group.calendar.google.com&";
 	if(!fieldHockeyClicked) {
 		fieldHockeyBtn.style.background= "#800000";
@@ -133,7 +133,7 @@ function fieldHockey () {
 }
 
 function golf () {
-	console.log("Golf clicked.");
+	//console.log("Golf clicked.");
 	var url = "src=auburnschl.edu_t79aj5enltkj4jkc8tn37cktp0@group.calendar.google.com&";
 	if(!golfClicked) {
 		golfBtn.style.background= "#800000";
@@ -152,7 +152,7 @@ function golf () {
 }
 
 function nordicSki () {
-	console.log("Nordic Ski clicked.");
+	//console.log("Nordic Ski clicked.");
 	var url = "src=auburnschl.edu_l17h04i5djjercjlgjt7436qh4@group.calendar.google.com&";
 	if(!nordicSkiClicked) {
 		nordicSkiBtn.style.background= "#800000";
@@ -171,7 +171,7 @@ function nordicSki () {
 }
 
 function basketball () {
-	console.log("Basketball clicked.");
+	//console.log("Basketball clicked.");
 	var url = "src=auburnschl.edu_4s09hpoufp9po7gabqn0tlm694@group.calendar.google.com&src=auburnschl.edu_tv6ueum8f6u509s1jhos3fktvo@group.calendar.google.com&";
 	if(!basketballClicked) {
 		basketballBtn.style.background= "#800000";
@@ -190,7 +190,7 @@ function basketball () {
 }
 
 function indoorTrack () {
-	console.log("Indoor Track clicked.");
+	//console.log("Indoor Track clicked.");
 	var url = "src=auburnschl.edu_evorn83fb1j2dd6qu82pug9cmc@group.calendar.google.com&";
 	if(!indoorTrackClicked) {
 		indoorTrackBtn.style.background= "#800000";
@@ -209,7 +209,7 @@ function indoorTrack () {
 }
 
 function cheering () {
-	console.log("Cheering clicked.");
+	//console.log("Cheering clicked.");
 	var url = "src=auburnschl.edu_rlsu6h15lfckte4s5ee8ktemt8@group.calendar.google.com&";
 	if(!cheeringClicked) {
 		cheeringBtn.style.background= "#800000";
@@ -228,7 +228,7 @@ function cheering () {
 }
 
 function alpineSki () {
-	console.log("Alpine Ski clicked.");
+	//console.log("Alpine Ski clicked.");
 	var url = "src=auburnschl.edu_550ovukqfajgjsllia3fnf773g@group.calendar.google.com&";
 	if(!alpineSkiClicked) {
 		alpineSkiBtn.style.background= "#800000";
@@ -247,7 +247,7 @@ function alpineSki () {
 }
 
 function hockey () {
-	console.log("Hockey clicked.");
+	//console.log("Hockey clicked.");
 	var url = "auburnschl.edu_porbieavksf6u3knra252rf3bk@group.calendar.google.com&src=auburnschl.edu_efcbsetp66ca3gherjptqvb79s@group.calendar.google.com&";
 	if(!hockeyClicked) {
 		hockeyBtn.style.background= "#800000";
@@ -266,7 +266,7 @@ function hockey () {
 }
 
 function swimming () {
-	console.log("Swimming clicked.");
+	//console.log("Swimming clicked.");
 	var url = "src=auburnschl.edu_k8qlefqm6m170b59hrgu24nr9k@group.calendar.google.com&";
 	if(!swimmingClicked) {
 		swimmingBtn.style.background= "#800000";
@@ -285,7 +285,7 @@ function swimming () {
 }
 
 function outdoorTrack () {
-	console.log("Outdoor Track clicked.");
+	//console.log("Outdoor Track clicked.");
 	var url = "src=auburnschl.edu_smg9dupm20daro135atuki6u5s%40group.calendar.google.com&";
 	if(!outdoorTrackClicked) {
 		outdoorTrackBtn.style.background= "#800000";
@@ -304,7 +304,7 @@ function outdoorTrack () {
 }
 
 function baseball () {
-	console.log("Baseball clicked.");
+	//console.log("Baseball clicked.");
 	var url = "src=auburnschl.edu_364lho1jat7uqgtp6afsvgloqs@group.calendar.google.com&";
 	if(!baseballClicked) {
 		baseballBtn.style.background= "#800000";
@@ -323,7 +323,7 @@ function baseball () {
 }
 
 function studentActivities () {
-	console.log("Student Activities clicked.");
+	//console.log("Student Activities clicked.");
 	var url = "src=auburnschl.edu_pn6id1hi8b5abe676g0khh2dl4@group.calendar.google.com&";
 	if(!studentActivitiesClicked) {
 		studentActivitiesBtn.style.background= "#800000";
@@ -342,7 +342,7 @@ function studentActivities () {
 }
 
 function tennis () {
-	console.log("Tennis clicked.");
+	//console.log("Tennis clicked.");
 	var url = "src=auburnschl.edu_j9qjnopu2nstpgkm6d57v2s7j0@group.calendar.google.com&auburnschl.edu_vovvbg4bks5ubbkcf31g6g3l1o@group.calendar.google.com&";
 	if(!tennisClicked) {
 		tennisBtn.style.background= "#800000";
@@ -360,7 +360,7 @@ function tennis () {
 }
 
 function lacrosse () {
-	console.log("Lacrosse clicked.");
+	//console.log("Lacrosse clicked.");
 	var url = "src=auburnschl.edu_4pm5kl57q4f5vtpfrl6avqarv0@group.calendar.google.com&src=auburnschl.edu_i8n9d4eu10op2j53ctohb3nhdk@group.calendar.google.com&";
 	if(!lacrosseClicked) {
 		lacrossBtn.style.background= "#800000";
@@ -378,7 +378,7 @@ function lacrosse () {
 }
 
 function general () {
-	console.log("General clicked.");
+	//console.log("General clicked.");
 	var url = "src=elhscal@auburnschl.edu&";
 	if(!generalClicked) {
 		generalBtn.style.background= "#800000";

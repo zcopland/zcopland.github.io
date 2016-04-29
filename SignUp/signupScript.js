@@ -77,12 +77,12 @@ var winterSeason = [nordicSkiDIV, basketballDIV, indoorTackDIV, cheeringDIV, alp
 var gender = 0;
 function handleClick(genderRad) {
 	gender = genderRad.value;
-	console.log(gender);
+	//console.log(gender);
 }
 var sport = 0;
 function handleClick2(sportRad) {
 	sport = sportRad.value;
-	console.log(sport);
+	//console.log(sport);
 }
 
 var currentSeason;
@@ -115,7 +115,7 @@ function mapEntries(json, realrowlength, skip){
 function doSomethingWithDataTree(root){
 	var length = root.children.length;
 	currentSeason = root.children[length-1].name.toLowerCase();
-	console.log(currentSeason);
+	//console.log(currentSeason);
 	if (currentSeason == "spring") {showSpring();}
 	if (currentSeason == "fall") {showFall();}
 	if (currentSeason == "winter") {showWinter();}
@@ -191,7 +191,7 @@ function signUp () {
 	var form = document.getElementById("sportsForm");
 
 	//displaying content in the fields
-	console.log(firstName + " " + lastName + " is a " + gender + " and wants to participate in " + sport + ". They can be reached at " + phoneNumber);
+	//console.log(firstName + " " + lastName + " is a " + gender + " and wants to participate in " + sport + ". They can be reached at " + phoneNumber);
 
 	//clearing the form
 	form.reset();
@@ -200,7 +200,7 @@ function signUp () {
 	var hi = document.createElement("iframe");
 	hi.style.display = "none";
 	document.body.appendChild(hi);
-	console.log(hi);
+	//console.log(hi);
 
 
 	var iframeError;
@@ -235,7 +235,7 @@ function signUp () {
 
 var attempts = 0;
 var parent = document.getElementById("parent");
-var pass1 = "password1";
+var pass1 = "@uburnSchL";
 var recoveryPass = "asdR3c0very";
 var springDIV = document.getElementById("springDIV");
 var winterDIV = document.getElementById("winterDIV");
@@ -252,7 +252,7 @@ editBtn.addEventListener("click", function() {
 		var hi = document.createElement("iframe");
 		hi.style.display = "none";
 		document.body.appendChild(hi);
-		console.log(hi);
+		//console.log(hi);
 
 		var iframeError;
 		if (seasonChange == "spring" || seasonChange == "winter" || seasonChange == "fall") {
@@ -261,7 +261,7 @@ editBtn.addEventListener("click", function() {
 		function submit2() {   
 		    console.log(seasonChange);
 		    url = baseurl2 + "Season=" + seasonChange;
-		    console.log(url);
+		    //console.log(url);
 		    hi.src = url;
 		    iframeError = setTimeout("error()", 5000);
 		}
