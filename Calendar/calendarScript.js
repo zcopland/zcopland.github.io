@@ -397,5 +397,5 @@ function general () {
 
 var helpDiv = document.getElementById("help");
 helpDiv.addEventListener("click", function() {
-  alert("General: No School, testing, graduation, etc...\n\nActivities: Clubs, spirit week, dances, etc...\n\nSports that boys and girls teams as well as different levels (Fresh, JV, Varsity) will be within one sport label.\n\nButtons that are clicked will appear on 'My Calendar'. Buttons that are unclicked will disappear.");
+  alert("General: No School, testing, graduation, etc...\n\nActivities: Clubs, spirit week, dances, etc...\n\nSports that have boys and girls teams as well as different levels (Fresh, JV, Varsity) will be within one sport label.\n\nButtons that are clicked will appear on 'My Calendar'. Buttons that are unclicked will disappear.");
 });
