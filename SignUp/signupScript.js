@@ -189,6 +189,7 @@ function signUp () {
 	var phoneNumber = document.getElementById("phoneNumber").value;
 	var position = document.getElementById("position").value;
 	var form = document.getElementById("sportsForm");
+	//var ip = myip;
 
 	//displaying content in the fields
 	//console.log(firstName + " " + lastName + " is a " + gender + " and wants to participate in " + sport + ". They can be reached at " + phoneNumber);
@@ -207,7 +208,7 @@ function signUp () {
 
 	function submit() {   
 	    
-	    url = baseurl + "First="+firstName+"&Last="+lastName+"&Number="+phoneNumber+"&Sex="+gender+"&Sport="+sport+"&Position="+position;
+	    url = baseurl + "First="+firstName+"&Last="+lastName+"&Number="+phoneNumber+"&Sex="+gender+"&Sport="+sport+"&Position="+position+"&IP="+myip;
 	    console.log(url);
 	    hi.src = url;
 	    iframeError = setTimeout("error()", 5000);  
