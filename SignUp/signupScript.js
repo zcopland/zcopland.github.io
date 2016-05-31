@@ -74,15 +74,13 @@ var fallSeason = [crossCountryDIV, footballDIV, soccerDIV, golfDIV, fieldHockeyD
 var winterSeason = [nordicSkiDIV, basketballDIV, indoorTackDIV, cheeringDIV, alpineSkiDIV, hockeyDIV, swimmingDIV];
 
 //functions for the changed values for radio buttons
-var gender = 0;
+var gender = null;
 function handleClick(genderRad) {
 	gender = genderRad.value;
-	//console.log(gender);
 }
-var sport = 0;
+var sport = null;
 function handleClick2(sportRad) {
 	sport = sportRad.value;
-	//console.log(sport);
 }
 
 var currentSeason;
@@ -189,19 +187,12 @@ function signUp () {
 	var phoneNumber = document.getElementById("phoneNumber").value;
 	var position = document.getElementById("position").value;
 	var form = document.getElementById("sportsForm");
-	//var ip = myip;
 
-	//displaying content in the fields
-	//console.log(firstName + " " + lastName + " is a " + gender + " and wants to participate in " + sport + ". They can be reached at " + phoneNumber);
-
-	//clearing the form
-	form.reset();
 
 	var baseurl = "https://script.google.com/macros/s/AKfycbyOyRnqIM0q214Z2IfnY0_2EL_ByKVhId7UKBkjPgWtWt6HwRI/exec?";
 	var hi = document.createElement("iframe");
 	hi.style.display = "none";
 	document.body.appendChild(hi);
-	//console.log(hi);
 
 
 	var iframeError;
@@ -209,7 +200,6 @@ function signUp () {
 	function submit() {   
 	    
 	    url = baseurl + "First="+firstName+"&Last="+lastName+"&Number="+phoneNumber+"&Sex="+gender+"&Sport="+sport+"&Position="+position+"&IP="+myip;
-	    console.log(url);
 	    hi.src = url;
 	    iframeError = setTimeout("error()", 5000);  
 	}
@@ -228,9 +218,21 @@ function signUp () {
 	hi.onload = function (e) {
 	        load(e);
 	        clearTimeout(iframeError);
-	    };
+	};
 
-	    submit();
+	var isFilledOut = true;
+	//checking to see if the form is filled out
+	if (firstName.length < 2 || lastName.length < 4 || phoneNumber.length < 9 || sport == null || gender == null) {
+		alert("Please fill out the required fields.");
+		isFilledOut = false;
+	}
+	if (isFilledOut) {
+		//submitting form
+		submit();
+
+		//clearing the form
+		form.reset();
+	}
 }
 
 
