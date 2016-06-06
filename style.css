@@ -437,7 +437,7 @@ h5{
 	font-size: 60%;
 	width: 6%;
 	margin: auto;
-	margin-top: 2%;
+	margin-top: 0%; /* was 2% */
 	border-radius: 7px;
 }
 .noselect {
