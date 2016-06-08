@@ -76,11 +76,11 @@ function listUpcomingEvents() {
     //checking to see what the current A or B day schedule is
     if (currentDay == "A Day") {
       scheduleDIV.innerHTML = "A";
-      console.log("It is an A Day.");
+      //console.log("It is an A Day.");
     }
     if (currentDay == "B Day") {
       scheduleDIV.innerHTML = "B";
-      console.log("It is a B Day.");
+      //console.log("It is a B Day.");
     }
     if (events.length > 0) {
       for (i = 0; i < events.length; i++) {
@@ -106,5 +106,5 @@ function appendPre(message) {
   var pre = document.getElementById('output');
   var textContent = document.createTextNode(message + '\n');
   //pre.appendChild(textContent);
-  console.log(textContent);
+  //console.log(textContent);
 }
