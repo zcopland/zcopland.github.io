@@ -14,11 +14,11 @@
 		<fieldset>
 			<legend id="legend">Personal Information</legend>
 			<h2 class="noSelect">First Name:</h2><br>
-			<input type="text" name="firstName" id="firstName" placeholder="John" onkeypress=""/><br><br>
+			<input type="text" name="firstName" id="firstName" required="required" placeholder="John" onkeypress=""/><br><br>
 			<h2>Last Name:</h2><br>
-			<input text="text" name="lastName" id="lastName" placeholder="Doe" onkeypress=""/><br><br>
+			<input text="text" name="lastName" id="lastName" required="required" placeholder="Doe" onkeypress=""/><br><br>
 			<h2>Phone Number:</h2><br>
-			<input type="tel" name="phoneNumber" id="phoneNumber" placeholder="2077838528" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/><br><br>
+			<input type="tel" name="phoneNumber" id="phoneNumber" required="required" placeholder="2077838528" onkeypress='return event.charCode >= 48 &amp; event.charCode <= 57'/><br><br>
 			<h2>Gender:</h2><br>
 			<input type="radio" name="gender" id="gender" value="Male" onclick="handleClick(this)" class="male"><label id="male"> Male</label></input ><br>
 			<input type="radio" name="gender" id="gender" value="Female" onclick="handleClick(this)" class="female"><label id="female">Female</label></input><br><br>
@@ -152,7 +152,7 @@
 		</fieldset>
 
 		<input type="button" name="sBackBtn" value="Home" id="sBackBtn" onclick="location.href='../index.html'" />
-		<input type="button" name="submit" value="Submit" id="submitBtn" onclick="signUp()" />
+		<input type="submit" name="submit" value="Submit" id="submitBtn" onclick="signUp()" />
 		<input type="button" name="edit" value="Edit" id="editBtn" onclick="editBtn" />
 	</form>
 
