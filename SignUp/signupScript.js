@@ -206,13 +206,13 @@ function signUp () {
 
 	function load(e) {
 	    console.log('success');
-	    alert("Thank you. Your form has been submitted.")
+	    $.notify("Thank you. Your form has been submitted.", "success");
 	   
 	}
 
 	function error() {
 	    console.log('error');
-	    alert("Error. Please try again later.")
+	    $.notify("Error. Please try again later.", "error");
 	}
 
 	hi.onload = function (e) {
@@ -223,7 +223,7 @@ function signUp () {
 	var isFilledOut = true;
 	//checking to see if the form is filled out
 	if (firstName.length < 2 || lastName.length < 4 || phoneNumber.length < 9 || sport == null || gender == null) {
-		alert("Please fill out the required fields.");
+		$.notify("Please fill out the required fields.", "warn");
 		isFilledOut = false;
 	}
 	if (isFilledOut) {
@@ -271,13 +271,13 @@ editBtn.addEventListener("click", function() {
 
 		function load2(e) {
 		    console.log('success');
-		    alert("Season has been changed.");
+		    $.notify("Season has been changed.", "success");
 		   
 		}
 
 		function error() {
 		    console.log('error');
-		    alert("Error. Please try again later.");
+		    $.notify("Error. Please try again later.", "error");
 		}
 
 		hi.onload2 = function (e) {
