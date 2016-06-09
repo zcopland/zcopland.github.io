@@ -206,13 +206,13 @@ function signUp () {
 
 	function load(e) {
 	    console.log('success');
-	    $.notify("Thank you. Your form has been submitted.", "success");
+	    $.notify("Thank you. Your form has been submitted.", {className:"success", position: "top center"});
 	   
 	}
 
 	function error() {
 	    console.log('error');
-	    $.notify("Error. Please try again later.", "error");
+	    $.notify("Error. Please try again later.", {className:"error", position: "top center"});
 	}
 
 	hi.onload = function (e) {
@@ -223,7 +223,7 @@ function signUp () {
 	var isFilledOut = true;
 	//checking to see if the form is filled out
 	if (firstName.length < 2 || lastName.length < 4 || phoneNumber.length < 9 || sport == null || gender == null) {
-		$.notify("Please fill out the required fields.", "warn");
+		$.notify("Please fill out the required fields.", {className:"warn", position: "top right"});
 		isFilledOut = false;
 	}
 	if (isFilledOut) {
@@ -271,13 +271,13 @@ editBtn.addEventListener("click", function() {
 
 		function load2(e) {
 		    console.log('success');
-		    $.notify("Season has been changed.", "success");
+		    $.notify("Season has been changed.", {className:"success", position: "top center"});
 		   
 		}
 
 		function error() {
 		    console.log('error');
-		    $.notify("Error. Please try again later.", "error");
+		    $.notify("Error. Please try again later.", {className:"error", position: "top center"});
 		}
 
 		hi.onload2 = function (e) {
@@ -293,16 +293,16 @@ editBtn.addEventListener("click", function() {
 	if (password == recoveryPass) {
 		var newPass = prompt("You have initiated the recovery password. What would you like to change the existing password to?", "");
 		pass1 = newPass;
-		alert("Password has been successfully changed.")
+		$.notify("Password has been successfully changed.", {className:"success", position: "bottom center"});
 	}
 	//password was entered incorrectly
 	else if (password !== pass1 && password !== recoveryPass) {
-		alert("Password Incorrect.");
+		$.notify("Password Incorrect.", {className:"warn", position: "bottom center"});
 		attempts++;
 		//locking user out for too many failed attempts
 		if (attempts > 3) {
 			editBtn.style.display = "none";
-			alert("You've been locked out.");
+			$.notify("You've been locked out.", {className:"error", position: "bottom center"});
 		}
 	}
 	
