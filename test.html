@@ -9,8 +9,9 @@
 		<script type="text/javascript">
 			var button = document.createElement("div");
 			button.innerHTML = "Click";
+			button.id = "button";
 			document.body.appendChild(button);
-			$.notify("Hello!", "warn");
+			$.notify("Hello!", {className:"warn", position: "bottom center"});
 		</script>
 	</body>
 </html>
